@@ -1,0 +1,8 @@
+// husky fica responsavel por toda parte de lidar com commits
+// melhorando-lhes com execução de scripts, por exemplo  
+
+{
+  "hooks": {
+    "pre-commit": "lint-staged"
+  }
+}
