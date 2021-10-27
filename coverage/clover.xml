@@ -1,43 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1635019686610" clover="3.2.0">
-  <project timestamp="1635019686610" name="All files">
-    <metrics statements="100" coveredstatements="60" conditionals="8" coveredconditionals="2" methods="44" coveredmethods="19" elements="152" coveredelements="81" complexity="0" loc="100" ncloc="100" packages="8" files="15" classes="15"/>
+<coverage generated="1635304761132" clover="3.2.0">
+  <project timestamp="1635304761133" name="All files">
+    <metrics statements="410" coveredstatements="308" conditionals="42" coveredconditionals="22" methods="111" coveredmethods="81" elements="563" coveredelements="411" complexity="0" loc="410" ncloc="410" packages="33" files="67" classes="67"/>
     <package name="data.test">
-      <metrics statements="19" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="0"/>
+      <metrics statements="31" coveredstatements="27" conditionals="0" coveredconditionals="0" methods="18" coveredmethods="14"/>
+      <file name="index.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/data/test/index.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+      </file>
       <file name="mockCriptography.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/data/test/mockCriptography.ts">
-        <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="0"/>
-        <line num="6" count="0" type="stmt"/>
+        <metrics statements="12" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="6"/>
+        <line num="6" count="3" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="23" count="7" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="29" count="6" type="stmt"/>
+        <line num="33" count="11" type="stmt"/>
+        <line num="36" count="3" type="stmt"/>
+        <line num="39" count="7" type="stmt"/>
+        <line num="43" count="11" type="stmt"/>
       </file>
       <file name="mockDbAccount.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/data/test/mockDbAccount.ts">
-        <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
+        <metrics statements="13" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="6"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="22" count="9" type="stmt"/>
+        <line num="26" count="11" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="36" count="7" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="42" count="5" type="stmt"/>
+        <line num="46" count="11" type="stmt"/>
+      </file>
+      <file name="mockLogError.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/data/test/mockLogError.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
       </file>
     </package>
     <package name="data.useCases.account.addAccount">
-      <metrics statements="10" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="10" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="1"/>
       <file name="dbAddAccount.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/data/useCases/account/addAccount/dbAddAccount.ts">
-        <metrics statements="10" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
+        <metrics statements="10" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="24" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="25" count="0" type="stmt"/>
@@ -46,29 +64,132 @@
         <line num="29" count="0" type="stmt"/>
       </file>
     </package>
+    <package name="data.useCases.account.authentication">
+      <metrics statements="19" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="dbAuthentication.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/data/useCases/account/authentication/dbAuthentication.ts">
+        <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="22" count="21" type="stmt"/>
+        <line num="23" count="21" type="stmt"/>
+        <line num="24" count="21" type="stmt"/>
+        <line num="25" count="21" type="stmt"/>
+        <line num="29" count="11" type="stmt"/>
+        <line num="30" count="10" type="cond" truecount="1" falsecount="0"/>
+        <line num="31" count="9" type="stmt"/>
+        <line num="32" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="33" count="7" type="stmt"/>
+        <line num="34" count="6" type="stmt"/>
+        <line num="35" count="5" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+      </file>
+      <file name="dbAuthenticationProtocols.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/data/useCases/account/authentication/dbAuthenticationProtocols.ts">
+        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="data.useCases.account.loadAccountByToken">
+      <metrics statements="13" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="dbLoadAccountByToken.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/data/useCases/account/loadAccountByToken/dbLoadAccountByToken.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="18" count="7" type="stmt"/>
+        <line num="19" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="21" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+      </file>
+      <file name="dbLoadAccountByTokenProtocols.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/data/useCases/account/loadAccountByToken/dbLoadAccountByTokenProtocols.ts">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+    </package>
     <package name="domain.test">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
       <file name="httpHelper.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/domain/test/httpHelper.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/domain/test/index.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
       </file>
       <file name="mockAccount.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/domain/test/mockAccount.ts">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
-        <line num="5" count="5" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <line num="5" count="21" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="18" count="11" type="stmt"/>
+      </file>
+    </package>
+    <package name="infra.criptography.bcryptAdapter">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="bcryptAdapter.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/infra/criptography/bcryptAdapter/bcryptAdapter.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="8" count="22" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="infra.criptography.jwtAdapter">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="jwtAdapter.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/infra/criptography/jwtAdapter/jwtAdapter.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="7" count="16" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="infra.db.mongoDb.account">
+      <metrics statements="16" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="accountMongoRepository.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/infra/db/mongoDb/account/accountMongoRepository.ts">
+        <metrics statements="16" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="46" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="47" count="0" type="stmt"/>
       </file>
     </package>
     <package name="infra.db.mongoDb.helper">
       <metrics statements="12" coveredstatements="5" conditionals="5" coveredconditionals="0" methods="6" coveredmethods="2"/>
       <file name="mongoHelper.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/infra/db/mongoDb/helper/mongoHelper.ts">
         <metrics statements="12" coveredstatements="5" conditionals="5" coveredconditionals="0" methods="6" coveredmethods="2"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
+        <line num="1" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
         <line num="21" count="0" type="cond" truecount="0" falsecount="5"/>
         <line num="22" count="0" type="stmt"/>
@@ -78,17 +199,315 @@
         <line num="33" count="0" type="stmt"/>
       </file>
     </package>
+    <package name="infra.db.mongoDb.log">
+      <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="logMongoRepository.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/infra/db/mongoDb/log/logMongoRepository.ts">
+        <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="infra.validators">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="emailValidatorAdapter.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/infra/validators/emailValidatorAdapter.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="main">
+      <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="server.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/server.ts">
+        <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="main.adapters">
+      <metrics statements="15" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="1"/>
+      <file name="express-middleware-adapter.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/adapters/express-middleware-adapter.ts">
+        <metrics statements="8" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+      </file>
+      <file name="express-route-adapter.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/adapters/express-route-adapter.ts">
+        <metrics statements="7" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="main.config">
+      <metrics statements="22" coveredstatements="22" conditionals="9" coveredconditionals="9" methods="4" coveredmethods="4"/>
+      <file name="app.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/config/app.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+      </file>
+      <file name="customModule.d.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/config/customModule.d.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="env.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/config/env.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="6" coveredconditionals="6" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+      </file>
+      <file name="middlewares.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/config/middlewares.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+      </file>
+      <file name="routes.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/config/routes.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="10" type="cond" truecount="3" falsecount="0"/>
+        <line num="10" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="main.decorators">
+      <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <file name="logControllerDecorator.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/decorators/logControllerDecorator.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="9" count="13" type="stmt"/>
+        <line num="10" count="13" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="main.factories.controllers.login.login">
+      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="loginControllerFactory.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/factories/controllers/login/login/loginControllerFactory.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+      </file>
+      <file name="loginValidationFactory.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/factories/controllers/login/login/loginValidationFactory.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="main.factories.controllers.login.signUp">
+      <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="signUpControllerFactory.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/factories/controllers/login/signUp/signUpControllerFactory.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+      </file>
+      <file name="signUpValidationFactory.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/factories/controllers/login/signUp/signUpValidationFactory.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="20" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="main.factories.decorators">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="logControllerDecoratorFactory.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/factories/decorators/logControllerDecoratorFactory.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="main.factories.middlewares">
+      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="authMiddlewareFactory.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/factories/middlewares/authMiddlewareFactory.ts">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="main.factories.useCases.account.addAccount">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="dbAddAccountFactory.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/factories/useCases/account/addAccount/dbAddAccountFactory.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="main.factories.useCases.account.authentication">
+      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="dbAuthenticationFactory.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/factories/useCases/account/authentication/dbAuthenticationFactory.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="10" type="stmt"/>
+        <line num="10" count="10" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
+        <line num="12" count="10" type="stmt"/>
+        <line num="13" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="main.factories.useCases.account.loadAccountByToken">
+      <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="dbLoadAccountByTokenFactory.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/factories/useCases/account/loadAccountByToken/dbLoadAccountByTokenFactory.ts">
+        <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="main.middlewares">
+      <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="bodyParser.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/middlewares/bodyParser.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+      </file>
+      <file name="contentType.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/middlewares/contentType.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+      </file>
+      <file name="cors.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/middlewares/cors.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/middlewares/index.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+      </file>
+      <file name="noCache.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/middlewares/noCache.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="main.routes">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="loginRoutes.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/main/routes/loginRoutes.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="presentation.controller.login">
+      <metrics statements="16" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="loginController.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/controller/login/loginController.ts">
+        <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
+        <line num="10" count="11" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="26" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+      </file>
+      <file name="loginControllerProtocols.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/controller/login/loginControllerProtocols.ts">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+      </file>
+    </package>
     <package name="presentation.controller.signUp">
       <metrics statements="18" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <file name="signUpController.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/controller/signUp/signUpController.ts">
         <metrics statements="18" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="16" count="8" type="stmt"/>
-        <line num="17" count="8" type="stmt"/>
-        <line num="18" count="8" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="16" count="13" type="stmt"/>
+        <line num="17" count="13" type="stmt"/>
+        <line num="18" count="13" type="stmt"/>
         <line num="22" count="8" type="stmt"/>
         <line num="23" count="8" type="stmt"/>
         <line num="24" count="8" type="cond" truecount="1" falsecount="0"/>
@@ -103,72 +522,194 @@
       </file>
     </package>
     <package name="presentation.errors">
-      <metrics statements="13" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
-      <file name="emailInUseError.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/errors/emailInUseError.ts">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-      </file>
-      <file name="missingParamError.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/errors/missingParamError.ts">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-      </file>
-      <file name="serverError.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/errors/serverError.ts">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="7" type="stmt"/>
-        <line num="4" count="7" type="stmt"/>
-        <line num="5" count="7" type="stmt"/>
-      </file>
-      <file name="unauthorizedError.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/errors/unauthorizedError.ts">
+      <metrics statements="25" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
+      <file name="accessDeniedError.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/errors/accessDeniedError.ts">
         <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
+        <line num="1" count="10" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
       </file>
+      <file name="emailInUseError.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/errors/emailInUseError.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/errors/index.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+      </file>
+      <file name="invalidParamError.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/errors/invalidParamError.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+      </file>
+      <file name="missingParamError.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/errors/missingParamError.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="3" count="9" type="stmt"/>
+        <line num="4" count="9" type="stmt"/>
+      </file>
+      <file name="serverError.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/errors/serverError.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="12" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+      </file>
+      <file name="unauthorizedError.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/errors/unauthorizedError.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="12" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+      </file>
     </package>
     <package name="presentation.helpers.http">
-      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="4"/>
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
       <file name="httpHelper.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/helpers/http/httpHelper.ts">
-        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="4"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="20" count="4" type="stmt"/>
-        <line num="25" count="5" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
+        <line num="1" count="8" type="stmt"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="25" count="12" type="stmt"/>
+        <line num="30" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="presentation.middlewares">
+      <metrics statements="16" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="authMiddleware.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/middlewares/authMiddleware.ts">
+        <metrics statements="13" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+      </file>
+      <file name="authMiddlewareProtocols.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/middlewares/authMiddlewareProtocols.ts">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="presentation.protocols">
+      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/protocols/index.ts">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
       </file>
     </package>
     <package name="presentation.test">
       <metrics statements="15" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="6"/>
       <file name="index.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/test/index.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
       </file>
       <file name="mockAccount.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/test/mockAccount.ts">
         <metrics statements="10" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="4"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
         <line num="10" count="5" type="stmt"/>
         <line num="13" count="8" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="19" count="4" type="stmt"/>
-        <line num="22" count="8" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
+        <line num="22" count="14" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
       </file>
       <file name="mockValidation.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/presentation/test/mockValidation.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="6" count="7" type="stmt"/>
-        <line num="10" count="8" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="6" count="12" type="stmt"/>
+        <line num="10" count="14" type="stmt"/>
+      </file>
+    </package>
+    <package name="validation.test">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="index.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/validation/test/index.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+      </file>
+      <file name="mockEmailValidator.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/validation/test/mockEmailValidator.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+      </file>
+      <file name="mockValidation.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/validation/test/mockValidation.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="validation.validators">
+      <metrics statements="28" coveredstatements="28" conditionals="4" coveredconditionals="4" methods="8" coveredmethods="8"/>
+      <file name="compareFieldsValidation.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/validation/validators/compareFieldsValidation.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="15" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+      <file name="emailValidation.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/validation/validators/emailValidation.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="11" count="13" type="stmt"/>
+        <line num="12" count="13" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="1" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/validation/validators/index.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+      </file>
+      <file name="requiredFieldValidation.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/validation/validators/requiredFieldValidation.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="9" count="32" type="stmt"/>
+        <line num="13" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+      <file name="validationComposite.ts" path="/home/gabrielpr/Documentos/usefashionstore/backend/src/validation/validators/validationComposite.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="8" count="13" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="2" type="stmt"/>
       </file>
     </package>
   </project>

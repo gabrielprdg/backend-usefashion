@@ -1,10 +1,11 @@
-export default  {
+export default {
   roots: ['<rootDir>/src'],
   collectCoverage: true,
   collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
   testEnvironment: 'node',
-  coverageProvider: "babel",
+  coverageProvider: 'babel',
+  preset: '@shelf/jest-mongodb',
   transform: {
     '.+\\.ts$': 'ts-jest'
   }
-};
+}

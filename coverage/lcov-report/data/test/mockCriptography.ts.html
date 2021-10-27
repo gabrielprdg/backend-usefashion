@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/16</span>
+                <span class='fraction'>14/16</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>6/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">83.33% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>10/12</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -106,7 +106,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -116,41 +116,41 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Decrypter } from '../protocols/criptography/decrypter'
 import { Encrypter } from '../protocols/criptography/encrypter'
 import { HashComparer } from '../protocols/criptography/hash-comparer'
 import { Hasher } from '../protocols/criptography/hasher'
 &nbsp;
-export const <span class="cstat-no" title="statement not covered" >mockHasher = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span>): Hasher =</span>&gt; {</span>
+export const mockHasher = <span class="fstat-no" title="function not covered" >(): Hasher =</span>&gt; {
   class HasherStub implements Hasher {
 <span class="fstat-no" title="function not covered" >    async </span>hash (value: string): Promise&lt;string&gt; {
 <span class="cstat-no" title="statement not covered" >      return Promise.resolve('hashed_password')</span>
@@ -160,34 +160,34 @@ export const <span class="cstat-no" title="statement not covered" >mockHasher = 
 <span class="cstat-no" title="statement not covered" >  return new HasherStub()</span>
 }
 &nbsp;
-export const <span class="cstat-no" title="statement not covered" >mockDecrypter = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span>): Decrypter =</span>&gt; {</span>
+export const mockDecrypter = (): Decrypter =&gt; {
   class DecrypterStub implements Decrypter {
-<span class="fstat-no" title="function not covered" >    async </span>decrypt (value: string): Promise&lt;string&gt; {
-<span class="cstat-no" title="statement not covered" >      return Promise.resolve('any_value')</span>
+    async decrypt (value: string): Promise&lt;string&gt; {
+      return Promise.resolve('any_value')
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return new DecrypterStub()</span>
+  return new DecrypterStub()
 }
 &nbsp;
-export const <span class="cstat-no" title="statement not covered" >mockEncrypter = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span>): Encrypter =</span>&gt; {</span>
+export const mockEncrypter = (): Encrypter =&gt; {
   class EncrypterStub implements Encrypter {
-<span class="fstat-no" title="function not covered" >    async </span>encrypt (id: string): Promise&lt;string&gt; {
-<span class="cstat-no" title="statement not covered" >      return Promise.resolve('any_token')</span>
+    async encrypt (id: string): Promise&lt;string&gt; {
+      return Promise.resolve('any_token')
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return new EncrypterStub()</span>
+  return new EncrypterStub()
 }
 &nbsp;
-export const <span class="cstat-no" title="statement not covered" >mockHashComparer = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span>): HashComparer =</span>&gt; {</span>
+export const mockHashComparer = (): HashComparer =&gt; {
   class HashComparerStub implements HashComparer {
-<span class="fstat-no" title="function not covered" >    async </span>comparer (value: string, hash: string): Promise&lt;boolean&gt; {
-<span class="cstat-no" title="statement not covered" >      return Promise.resolve(true)</span>
+    async compare (value: string, hash: string): Promise&lt;boolean&gt; {
+      return Promise.resolve(true)
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return new HashComparerStub()</span>
+  return new HashComparerStub()
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -196,7 +196,7 @@ export const <span class="cstat-no" title="statement not covered" >mockHashCompa
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Oct 23 2021 17:08:05 GMT-0300 (Horário Padrão de Brasília)
+                at Wed Oct 27 2021 00:19:20 GMT-0300 (Horário Padrão de Brasília)
             </div>
         </div>
         <script src="../../prettify.js"></script>
