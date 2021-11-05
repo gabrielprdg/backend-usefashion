@@ -15,5 +15,6 @@ export const makeSignUpValidation = (): ValidationComposite => {
   }
   validations.push(new CompareFieldsValidation('password', 'passwordConfirmation'))
   validations.push(new EmailValidation(new EmailValidatorAdapter(), 'email'))
+  console.log(validations)
   return new ValidationComposite(validations)
 }

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">37.5% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/8</span>
+                <span class='fraction'>7/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">28.57% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/7</span>
+                <span class='fraction'>6/7</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -84,20 +84,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -105,8 +105,8 @@
 import { Request, RequestHandler, Response } from 'express'
 &nbsp;
 export const adaptRoute = (controller: Controller): RequestHandler =&gt; {
-  return <span class="fstat-no" title="function not covered" >async </span>(req: Request, res: Response) =&gt; {
-    const httpRequest: HttpRequest = <span class="cstat-no" title="statement not covered" >{</span>
+  return async (req: Request, res: Response) =&gt; {
+    const httpRequest: HttpRequest = {
       body: req.body,
       params: req.params,
       accountId: req.accountId
@@ -114,12 +114,12 @@ export const adaptRoute = (controller: Controller): RequestHandler =&gt; {
     // funcao que receberá o controller e retornara uma funcao de requisição e resposta que tera como resposta o metodo
     // responsavel por lidar com todo controller
 &nbsp;
-    const httpResponse = <span class="cstat-no" title="statement not covered" >await controller.handle(httpRequest)</span>
+    const httpResponse = await controller.handle(httpRequest)
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (httpResponse.statusCode &gt;= 200 &amp;&amp; httpResponse.statusCode &lt;= 299) {</span>
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (httpResponse.statusCode &gt;= 200 &amp;&amp; httpResponse.statusCode &lt;= 299) {
 <span class="cstat-no" title="statement not covered" >      res.status(httpResponse.statusCode).json(httpResponse.body)</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      res.status(httpResponse.statusCode).json({ error: httpResponse.body.message })</span>
+      res.status(httpResponse.statusCode).json({ error: httpResponse.body.message })
     }
   }
 }
@@ -130,7 +130,7 @@ export const adaptRoute = (controller: Controller): RequestHandler =&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Oct 27 2021 00:19:20 GMT-0300 (Horário Padrão de Brasília)
+                at Thu Oct 28 2021 11:45:36 GMT-0300 (Horário Padrão de Brasília)
             </div>
         </div>
         <script src="../../prettify.js"></script>

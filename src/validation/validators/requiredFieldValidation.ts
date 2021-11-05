@@ -10,6 +10,9 @@ export class RequiredFieldValidation implements Validation {
   }
 
   validate (input: any): Error {
+    console.log('below2')
+    console.log(input)
+    console.log(this.fieldName)
     if (!input[this.fieldName]) {
       return new MissingParamError(this.fieldName)
     }

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">12.5% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/16</span>
+                <span class='fraction'>16/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">12.5% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/16</span>
+                <span class='fraction'>16/16</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -117,34 +117,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -152,8 +141,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -166,24 +166,24 @@ import { UpdateAccessTokenRepository } from '../../../../data/protocols/db/accou
 import { LoadAccountByTokenRepository } from '../../../../data/protocols/db/account/loadAccountByTokenRepository'
 &nbsp;
 export class AccountMongoRepository implements AddAccountRepository, LoadAccountByEmailRepository, UpdateAccessTokenRepository, LoadAccountByTokenRepository {
-<span class="fstat-no" title="function not covered" >  async </span>add (accountData: AddAccountParams): Promise&lt;AccountModel&gt; {
-    const accountCollection = <span class="cstat-no" title="statement not covered" >await mongoHelper.getCollection('accounts')</span>
-    const result = <span class="cstat-no" title="statement not covered" >await accountCollection.insertOne(accountData)</span>
-    const accountD = <span class="cstat-no" title="statement not covered" >result.ops[0]</span>
-<span class="cstat-no" title="statement not covered" >    return mongoHelper.map(accountD)</span>
+  async add (accountData: AddAccountParams): Promise&lt;AccountModel&gt; {
+    const accountCollection = await mongoHelper.getCollection('accounts')
+    const result = await accountCollection.insertOne(accountData)
+    const accountD = result.ops[0]
+    return mongoHelper.map(accountD)
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async </span>loadByEmail (email: string): Promise&lt;AccountModel&gt; {
-    const accountCollection = <span class="cstat-no" title="statement not covered" >await mongoHelper.getCollection('accounts')</span>
-    const account = <span class="cstat-no" title="statement not covered" >await accountCollection.findOne({ email })</span>
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (account) {</span>
-<span class="cstat-no" title="statement not covered" >      return mongoHelper.map(account)</span>
+  async loadByEmail (email: string): Promise&lt;AccountModel&gt; {
+    const accountCollection = await mongoHelper.getCollection('accounts')
+    const account = await accountCollection.findOne({ email })
+    if (account) {
+      return mongoHelper.map(account)
     }
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async </span>updateAccessToken (id: string, token: string): Promise&lt;void&gt; {
-    const accountCollection = <span class="cstat-no" title="statement not covered" >await mongoHelper.getCollection('accounts')</span>
-<span class="cstat-no" title="statement not covered" >    await accountCollection.updateOne({</span>
+  async updateAccessToken (id: string, token: string): Promise&lt;void&gt; {
+    const accountCollection = await mongoHelper.getCollection('accounts')
+    await accountCollection.updateOne({
       _id: id
     }, {
       $set: {
@@ -192,9 +192,9 @@ export class AccountMongoRepository implements AddAccountRepository, LoadAccount
     })
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async </span>loadByToken (token: string, role?: string): Promise&lt;AccountModel&gt; {
-    const accountCollection = <span class="cstat-no" title="statement not covered" >await mongoHelper.getCollection('accounts')</span>
-    const account = <span class="cstat-no" title="statement not covered" >await accountCollection.findOne({</span>
+  async loadByToken (token: string, role?: string): Promise&lt;AccountModel&gt; {
+    const accountCollection = await mongoHelper.getCollection('accounts')
+    const account = await accountCollection.findOne({
       accessToken: token,
       $or: [{
         role
@@ -202,8 +202,8 @@ export class AccountMongoRepository implements AddAccountRepository, LoadAccount
         role: 'admin'
       }]
     })
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (account) {</span>
-<span class="cstat-no" title="statement not covered" >      return mongoHelper.map(account)</span>
+    if (account) {
+      return mongoHelper.map(account)
     }
   }
 }
@@ -214,7 +214,7 @@ export class AccountMongoRepository implements AddAccountRepository, LoadAccount
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Oct 27 2021 00:19:20 GMT-0300 (Horário Padrão de Brasília)
+                at Fri Oct 29 2021 13:35:12 GMT-0300 (Horário Padrão de Brasília)
             </div>
         </div>
         <script src="../../../../prettify.js"></script>

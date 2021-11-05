@@ -23,7 +23,7 @@ export const serverError = (error: Error): HttpResponse => ({
 })
 
 export const ok = (data: any): HttpResponse => ({
-  statusCode: 400,
+  statusCode: 200,
   body: data
 })
 

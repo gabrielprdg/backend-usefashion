@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/13</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/13</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -85,56 +85,56 @@
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { LoadAccountByToken, HttpRequest, HttpResponse, Middleware } from './authMiddlewareProtocols'
-<span class="cstat-no" title="statement not covered" >import { AccessDeniedError } from '../errors'</span>
-<span class="cstat-no" title="statement not covered" >import { forbidden, ok, serverError } from '../helpers/http/httpHelper'</span>
+import { AccessDeniedError } from '../errors'
+import { forbidden, ok, serverError } from '../helpers/http/httpHelper'
 &nbsp;
-<span class="cstat-no" title="statement not covered" >export class A</span>uthMiddleware implements Middleware {
+export class AuthMiddleware implements Middleware {
   private readonly loadAccountByToken: LoadAccountByToken
   private readonly role: string
-<span class="fstat-no" title="function not covered" >  constructor (l</span>oadAccountByToken, role) {
-<span class="cstat-no" title="statement not covered" >    this.loadAccountByToken = loadAccountByToken</span>
-<span class="cstat-no" title="statement not covered" >    this.role = role</span>
+  constructor (loadAccountByToken, role) {
+    this.loadAccountByToken = loadAccountByToken
+    this.role = role
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async </span>handle (httpRequest: HttpRequest): Promise&lt;HttpResponse&gt; {
-<span class="cstat-no" title="statement not covered" >    try {</span>
-      const accessToken = <span class="cstat-no" title="statement not covered" >httpRequest.headers?.['x-access-token']</span>
-<span class="cstat-no" title="statement not covered" >      <span class="missing-if-branch" title="if path not taken" >I</span>if (accessToken) {</span>
-        const account = <span class="cstat-no" title="statement not covered" >await this.loadAccountByToken.load(accessToken, this.role)</span>
-<span class="cstat-no" title="statement not covered" >        <span class="missing-if-branch" title="if path not taken" >I</span>if (account) {</span>
-<span class="cstat-no" title="statement not covered" >          return ok({ accountId: account.id })</span>
+  async handle (httpRequest: HttpRequest): Promise&lt;HttpResponse&gt; {
+    try {
+      const accessToken = httpRequest.headers?.['x-access-token']
+      if (accessToken) {
+        const account = await this.loadAccountByToken.load(accessToken, this.role)
+        if (account) {
+          return ok({ accountId: account.id })
         }
       }
-<span class="cstat-no" title="statement not covered" >      return forbidden(new AccessDeniedError())</span>
+      return forbidden(new AccessDeniedError())
     } catch (err) {
-<span class="cstat-no" title="statement not covered" >      return serverError(err)</span>
+      return serverError(err)
     }
   }
 }
@@ -145,7 +145,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Oct 27 2021 00:19:20 GMT-0300 (Horário Padrão de Brasília)
+                at Fri Oct 29 2021 13:35:12 GMT-0300 (Horário Padrão de Brasília)
             </div>
         </div>
         <script src="../../prettify.js"></script>

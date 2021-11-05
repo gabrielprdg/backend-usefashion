@@ -15,7 +15,7 @@ const makeHttpRequest = ():HttpRequest => ({
     name: 'any_name',
     email: 'any@mail',
     password: 'any_password',
-    passwordCOnfirmation: 'any_password'
+    passwordConfirmation: 'any_password'
   }
 })
 
