@@ -1,4 +1,7 @@
+import { ProductModel } from '../../domain/models/product'
+import { mockProductModel } from '../../domain/test/mockProduct'
 import { AddProduct, AddProductParams } from '../../domain/useCases/product/addProduct'
+import { LoadProductById } from '../../domain/useCases/product/loadProducts'
 
 export const mockAddProduct = (): AddProduct => {
   class AddProductStub implements AddProduct {
@@ -8,4 +11,14 @@ export const mockAddProduct = (): AddProduct => {
   }
 
   return new AddProductStub()
+}
+
+export const mockLoadProductById = (): LoadProductById => {
+  class LoadProductByIdStub implements LoadProductById {
+    async loadById (id: string): Promise<ProductModel> {
+      return Promise.resolve(mockProductModel())
+    }
+  }
+
+  return new LoadProductByIdStub()
 }
