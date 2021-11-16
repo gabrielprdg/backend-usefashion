@@ -1,5 +1,5 @@
 import { forbidden, ok, serverError } from '../../../../presentation/helpers/http/httpHelper'
-import { LoadProductById } from '../../../../domain/useCases/product/loadProducts'
+import { LoadProductById } from '../../../../domain/useCases/product/loadProductById'
 import { Controller, HttpRequest, HttpResponse } from '../../../../presentation/protocols'
 import { InvalidParamError } from '../../../errors'
 
