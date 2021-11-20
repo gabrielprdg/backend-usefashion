@@ -13,7 +13,7 @@ export const adaptRoute = (controller: Controller): RequestHandler => {
     // responsavel por lidar com todo controller
 
     const httpResponse = await controller.handle(httpRequest)
-
+    console.log(httpResponse)
     if (httpResponse.statusCode >= 200 && httpResponse.statusCode <= 299) {
       res.status(httpResponse.statusCode).json(httpResponse.body)
     } else {

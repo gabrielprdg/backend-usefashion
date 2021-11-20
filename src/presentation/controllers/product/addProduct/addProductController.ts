@@ -1,6 +1,6 @@
-import { ServerError } from '../../../../presentation/errors'
+import { ServerError } from '../../../errors'
 import { AddProduct } from '../../../../domain/useCases/product/addProduct'
-import { badRequest, noContent, serverError } from '../../../../presentation/helpers/http/httpHelper'
+import { badRequest, noContent, serverError } from '../../../helpers/http/httpHelper'
 import { Controller, HttpRequest, HttpResponse, Validation } from '../../../protocols'
 
 export class AddProductController implements Controller {

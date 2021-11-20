@@ -1,6 +1,6 @@
-import { forbidden, ok, serverError } from '../../../../presentation/helpers/http/httpHelper'
+import { forbidden, ok, serverError } from '../../../helpers/http/httpHelper'
 import { LoadProductById } from '../../../../domain/useCases/product/loadProductById'
-import { Controller, HttpRequest, HttpResponse } from '../../../../presentation/protocols'
+import { Controller, HttpRequest, HttpResponse } from '../../../protocols'
 import { InvalidParamError } from '../../../errors'
 
 export class LoadProductByIdController implements Controller {
