@@ -1,5 +1,6 @@
 import mockdate from 'mockdate'
 import { throwError } from '../../../../domain/test'
+import { mockProductModel } from '../../../../domain/test/mockProduct'
 import { LoadProductByIdRepository } from '../../../protocols/db/product/loadProductByIdRepository'
 import { mockLoadProductByIdRepository } from '../../../test/mockDbProduct'
 import { DbLoadProductById } from './dbLoadProductById'
@@ -35,14 +36,13 @@ describe('DbLoadProductById', () => {
     expect(loadByIdSpy).toHaveBeenCalledWith('any_id')
   })
 
-  test('Should call LoadSurveysByIdRepository', async () => {
-    const { sut, loadProductByIdRepositoryStub } = makeSut()
-    const loadByIdSpy = jest.spyOn(loadProductByIdRepositoryStub, 'loadById')
-    await sut.loadById('any_id')
-    expect(loadByIdSpy).toHaveBeenCalledWith('any_id')
+  test('Should return a Products on success ', async () => {
+    const { sut } = makeSut()
+    const survey = await sut.loadById('any_id')
+    expect(survey).toEqual(mockProductModel())
   })
 
-  test('Should throws if LoadSurveysRepository throws', async () => {
+  test('Should throws if LoadSurveyByIdRepository throws', async () => {
     const { sut, loadProductByIdRepositoryStub } = makeSut()
     jest.spyOn(loadProductByIdRepositoryStub, 'loadById').mockImplementationOnce(throwError)
 

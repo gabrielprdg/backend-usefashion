@@ -3,6 +3,7 @@ import { mockProductModel, mockProducts } from '../../domain/test/mockProduct'
 import { AddProductParams } from '../../domain/useCases/product/addProduct'
 import { AddProductRepository } from '../protocols/db/product/addProductRepository'
 import { LoadProductByIdRepository } from '../protocols/db/product/loadProductByIdRepository'
+import { LoadProductsByCategoryRepository } from '../protocols/db/product/loadProductsByCategory'
 import { LoadProductsRepository } from '../protocols/db/product/loadProductsRepository'
 
 export const mockAddProductRepository = (): AddProductRepository => {
@@ -33,4 +34,14 @@ export const mockLoadProductsRepository = (): LoadProductsRepository => {
   }
 
   return new LoadProductsRepositoryStub()
+}
+
+export const mockLoadProductsByCategoryRepository = (): LoadProductsByCategoryRepository => {
+  class LoadProductsByCategoryRepositoryStub implements LoadProductsByCategoryRepository {
+    async loadByCategory (category: string): Promise<ProductModel[]> {
+      return Promise.resolve(mockProducts())
+    }
+  }
+
+  return new LoadProductsByCategoryRepositoryStub()
 }

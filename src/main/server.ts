@@ -1,4 +1,3 @@
-import 'module-alias/register'
 import { mongoHelper } from '../infra/db/mongoDb/helper/mongoHelper'
 import env from './config/env'
 
