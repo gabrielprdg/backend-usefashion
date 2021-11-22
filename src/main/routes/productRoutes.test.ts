@@ -98,9 +98,5 @@ describe('Product Routes', () => {
         .get('/api/products')
         .expect(200)
     })
-
-    test('Should return ', () => {
-
-    })
   })
 })
