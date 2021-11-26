@@ -99,4 +99,21 @@ describe('Product Routes', () => {
         .expect(200)
     })
   })
+
+  test('Should return 200 on load product by Id', async () => {
+    const res = await productCollection.insertOne({
+      name: 'any_name',
+      description: 'any_description',
+      category: 'any_category',
+      price: 4,
+      images: [{
+        url: 'any_url'
+      }],
+      createdAt: new Date()
+    })
+
+    await request(app)
+      .get(`/api/product/${res.ops[0]._id as string}`)
+      .expect(200)
+  })
 })

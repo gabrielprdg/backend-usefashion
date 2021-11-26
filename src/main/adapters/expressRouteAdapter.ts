@@ -9,6 +9,8 @@ export const adaptRoute = (controller: Controller): RequestHandler => {
       accountId: req.accountId
     }
 
+    console.log(httpRequest)
+
     // funcao que receberá o controller e retornara uma funcao de requisição e resposta que tera como resposta o metodo
     // responsavel por lidar com todo controller
 
