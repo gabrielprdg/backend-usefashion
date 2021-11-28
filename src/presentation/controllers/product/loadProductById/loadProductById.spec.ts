@@ -10,7 +10,7 @@ import { LoadProductByIdController } from './loadProductById'
 
 const makeFakeRequest = (): HttpRequest => ({
   params: {
-    productId: 'any_product_id'
+    id: 'any_product_id'
   }
 })
 

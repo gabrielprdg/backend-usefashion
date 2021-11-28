@@ -11,8 +11,9 @@ export class LoadProductByIdController implements Controller {
 
   async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
     try {
-      const { productId } = httpRequest.params
-      const product = await this.loadProductById.loadById(productId)
+      const { id } = httpRequest.params
+
+      const product = await this.loadProductById.loadById(id)
       if (product) {
         return ok(product)
       } else {
