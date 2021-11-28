@@ -1,4 +1,5 @@
 import mockdate from 'mockdate'
+import { mockAddCategoryParams } from '../../../../domain/test/mockCategory'
 import { AddCategoryRepository } from '../../../protocols/db/category/addCategoryRepository'
 import { mockAddCategoryRepository } from '../../../test/mockDbCategory'
 import { DbAddCategory } from './dbAddCategory'
@@ -26,8 +27,9 @@ describe('DbAddCategory', () => {
   afterAll(() => {
     mockdate.reset()
   })
-  test('Shoul call AddCategoryRepostory with correct values', () => {
+  test('Shoul call AddCategoryRepostory with correct values', async () => {
     const { addCategoryRepositoryStub, sut } = makeSut()
     jest.spyOn(addCategoryRepositoryStub, 'add')
+    await sut.add(mockAddCategoryParams())
   })
 })

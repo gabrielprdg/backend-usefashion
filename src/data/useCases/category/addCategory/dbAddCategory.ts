@@ -7,7 +7,7 @@ export class DbAddCategory implements AddCategory {
     this.addCategoryRepository = addCategoryRepository
   }
 
-  async add (addCategoryParams: AddCategoryParams):Promise<void> {
-    
+  async add (categoryData: AddCategoryParams):Promise<void> {
+    await this.addCategoryRepository.add(categoryData)
   }
 }
