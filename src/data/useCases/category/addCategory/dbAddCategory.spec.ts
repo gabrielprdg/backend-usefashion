@@ -1,8 +1,8 @@
 import mockdate from 'mockdate'
-import { throwError } from '../../../../../domain/test'
-import { mockAddCategoryParams } from '../../../../../domain/test/mockCategory'
-import { AddCategoryRepository } from '../../../../protocols/db/category/addCategoryRepository'
-import { mockAddCategoryRepository } from '../../../../test/mockDbCategory'
+import { throwError } from '../../../../domain/test'
+import { mockAddCategoryParams } from '../../../../domain/test/mockCategory'
+import { AddCategoryRepository } from '../../../protocols/db/category/addCategoryRepository'
+import { mockAddCategoryRepository } from '../../../test/mockDbCategory'
 import { DbAddCategory } from './dbAddCategory'
 
 type SutTypes = {

@@ -1,5 +1,5 @@
-import { AddCategory, AddCategoryParams } from '../../../../../domain/useCases/category/addCategory'
-import { AddCategoryRepository } from '../../../../protocols/db/category/addCategoryRepository'
+import { AddCategory, AddCategoryParams } from '../../../../domain/useCases/category/addCategory'
+import { AddCategoryRepository } from '../../../protocols/db/category/addCategoryRepository'
 
 export class DbAddCategory implements AddCategory {
   private readonly addCategoryRepository: AddCategoryRepository
