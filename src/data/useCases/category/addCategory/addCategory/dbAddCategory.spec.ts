@@ -1,7 +1,8 @@
 import mockdate from 'mockdate'
-import { mockAddCategoryParams } from '../../../../domain/test/mockCategory'
-import { AddCategoryRepository } from '../../../protocols/db/category/addCategoryRepository'
-import { mockAddCategoryRepository } from '../../../test/mockDbCategory'
+import { throwError } from '../../../../../domain/test'
+import { mockAddCategoryParams } from '../../../../../domain/test/mockCategory'
+import { AddCategoryRepository } from '../../../../protocols/db/category/addCategoryRepository'
+import { mockAddCategoryRepository } from '../../../../test/mockDbCategory'
 import { DbAddCategory } from './dbAddCategory'
 
 type SutTypes = {
@@ -31,5 +32,14 @@ describe('DbAddCategory', () => {
     const { addCategoryRepositoryStub, sut } = makeSut()
     jest.spyOn(addCategoryRepositoryStub, 'add')
     await sut.add(mockAddCategoryParams())
+  })
+
+  test('Should throws if AddCategoryRepository throws', async () => {
+    const { sut, addCategoryRepositoryStub } = makeSut()
+    jest.spyOn(addCategoryRepositoryStub, 'add').mockImplementationOnce(throwError)
+
+    const promise = sut.add(mockAddCategoryParams())
+    // espera que o metodo encrypt lanse um erro
+    await expect(promise).rejects.toThrow()
   })
 })

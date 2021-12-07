@@ -25,7 +25,7 @@ describe('Product Mongo Repository', () => {
   describe('add()', () => {
     test('Should add a product on success', async () => {
       const sut = makeSut()
-      sut.add({
+      await sut.add({
         name: 'any_name',
         description: 'any_description',
         category: 'any_category',

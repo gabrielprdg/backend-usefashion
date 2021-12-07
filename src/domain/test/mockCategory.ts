@@ -1,12 +1,6 @@
-import { AddProductParams } from '../useCases/product/addProduct'
+import { AddCategoryParams } from '../useCases/category/addCategory'
 
-export const mockAddCategoryParams = (): AddProductParams => ({
+export const mockAddCategoryParams = (): AddCategoryParams => ({
   name: 'any_field',
-  description: 'any_description',
-  category: 'any_category',
-  price: 4,
-  images: [{
-    url: 'any_url'
-  }],
   createdAt: new Date()
 })

@@ -36,7 +36,7 @@ describe('DbAddProduct', () => {
     expect(addSpy).toHaveBeenCalledWith(mockAddProductParams())
   })
 
-  test('Should throws if AddSurveyRepository throws', async () => {
+  test('Should throws if AddProductRepository throws', async () => {
     const { sut, addProductRepositoryStub } = makeSut()
     jest.spyOn(addProductRepositoryStub, 'add').mockImplementationOnce(throwError)
 
