@@ -83,6 +83,10 @@ describe('Product Mongo Repository', () => {
         }],
         createdAt: new Date()
       }])
+      const sut = makeSut()
+      const products = await sut.loadAll()
+      expect(products.length).toBe(2)
+      expect(products[0].id).toBeTruthy()
     })
   })
 
@@ -100,7 +104,7 @@ describe('Product Mongo Repository', () => {
       }, {
         name: 'any_name2',
         description: 'any_description2',
-        category: 'any_category',
+        category: 'any_category2',
         price: 4,
         images: [{
           url: 'any_url2'
@@ -108,11 +112,10 @@ describe('Product Mongo Repository', () => {
         createdAt: new Date()
       }])
       const sut = makeSut()
-      const products = await sut.loadAll()
-      expect(products.length).toBe(2)
+      const products = await sut.loadByCategory('any_category2')
+      expect(products.length).toBe(1)
       expect(products[0].id).toBeTruthy()
-      expect(products[0].name).toBe('any_name')
-      expect(products[1].name).toBe('any_name2')
+      expect(products[0].name).toBe('any_name2')
     })
 
     test('Should load empty list', async () => {

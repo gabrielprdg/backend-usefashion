@@ -4,7 +4,6 @@ import { makeLogControllerDecorator } from '../../../decorators/logControllerDec
 import { makeDbAddCategory } from '../../../useCases/category/addCategory/dbAddCategoryFactory'
 import { makeAddCategoryValidation } from './addCategoryValidationFactory'
 
-
 export const makeAddCategoryController = (): Controller => {
   const controller = new AddCategoryController(makeDbAddCategory(), makeAddCategoryValidation())
   return makeLogControllerDecorator(controller)

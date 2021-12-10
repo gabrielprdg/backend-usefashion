@@ -72,7 +72,7 @@ describe('category Routes', () => {
   describe('GET / categories', () => {
     test('Should return 200 on load categories ', async () => {
       await categoryCollection.insertMany([{
-        name: 'any_name',
+        name: 'any_nam',
         createdAt: new Date()
       }])
 

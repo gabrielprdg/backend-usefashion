@@ -9,7 +9,7 @@ const makeSut = (): CategoryMongoRepository => {
 let categoryCollection: Collection
 
 describe('Category Mongo Repository', () => {
-	beforeAll(async () => {
+  beforeAll(async () => {
     await mongoHelper.connect(process.env.MONGO_URL)
   })
 
@@ -21,17 +21,35 @@ describe('Category Mongo Repository', () => {
     categoryCollection = await mongoHelper.getCollection('categories')
     await categoryCollection.deleteMany({})
   })
-	
-	describe('add()', () => {
-		test('Should add a category on success', async() => {
-			const sut = makeSut()
+
+  describe('add()', () => {
+    test('Should add a category on success', async () => {
+      const sut = makeSut()
       await sut.add({
         name: 'any_name',
         createdAt: new Date()
       })
 
-			const category = await categoryCollection.find({ name: 'any_name' })
+      const category = await categoryCollection.find({ name: 'any_name' })
       expect(category).toBeTruthy()
-		})
-	})
+    })
+  })
+
+  describe('loadAll()', () => {
+    test('Should load all categories', async () => {
+      await categoryCollection.insertMany([
+        {
+          name: 'any_name',
+          createdAt: new Date()
+        },
+        {
+          name: 'any_name2',
+          createdAt: new Date()
+        }
+      ])
+      const sut = makeSut()
+      const categories = await sut.loadAll()
+      expect(categories.length).toBe(2)
+    })
+  })
 })
