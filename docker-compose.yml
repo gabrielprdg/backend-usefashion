@@ -17,6 +17,6 @@ services:
     volumes:
       - ./dist:/usr/src/usefashionstore/backend/dist
     ports:
-      - "8080:8080"
+      - "8081:8081"
     links:
       - mongo

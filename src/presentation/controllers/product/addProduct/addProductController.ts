@@ -18,7 +18,9 @@ export class AddProductController implements Controller {
       if (error) {
         return badRequest(error)
       }
-      const { name, description, category, price, images } = httpRequest.body
+      const { originalName: nameFile, size, fileName: key } = httpRequest.file
+      const images = [{ nameFile, size, key, url: '' }]
+      const { name, description, category, price } = httpRequest.body
       await this.addProduct.add({ name, description, category, price, images, createdAt: new Date() })
 
       return noContent()

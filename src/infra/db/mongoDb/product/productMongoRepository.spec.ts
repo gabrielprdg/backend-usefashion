@@ -31,6 +31,9 @@ describe('Product Mongo Repository', () => {
         category: 'any_category',
         price: 4,
         images: [{
+          nameFile: 'any_name',
+          size: 'any_size',
+          key: 'any_key',
           url: 'any_url'
         }],
         createdAt: new Date()
@@ -49,6 +52,9 @@ describe('Product Mongo Repository', () => {
         category: 'any_category',
         price: 4,
         images: [{
+          nameFile: 'any_name',
+          size: 'any_size',
+          key: 'any_key',
           url: 'any_url'
         }],
         createdAt: new Date()
@@ -70,6 +76,9 @@ describe('Product Mongo Repository', () => {
         category: 'any_category',
         price: 4,
         images: [{
+          nameFile: 'any_name',
+          size: 'any_size',
+          key: 'any_key',
           url: 'any_url'
         }],
         createdAt: new Date()
@@ -79,7 +88,10 @@ describe('Product Mongo Repository', () => {
         category: 'any_category',
         price: 4,
         images: [{
-          url: 'any_url2'
+          nameFile: 'any_name',
+          size: 'any_size',
+          key: 'any_key',
+          url: 'any_url'
         }],
         createdAt: new Date()
       }])
@@ -98,6 +110,9 @@ describe('Product Mongo Repository', () => {
         category: 'any_category',
         price: 4,
         images: [{
+          nameFile: 'any_name',
+          size: 'any_size',
+          key: 'any_key',
           url: 'any_url'
         }],
         createdAt: new Date()
@@ -107,7 +122,10 @@ describe('Product Mongo Repository', () => {
         category: 'any_category2',
         price: 4,
         images: [{
-          url: 'any_url2'
+          nameFile: 'any_name',
+          size: 'any_size',
+          key: 'any_key',
+          url: 'any_url'
         }],
         createdAt: new Date()
       }])
