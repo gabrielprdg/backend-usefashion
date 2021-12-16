@@ -8,8 +8,8 @@ export const mockProductModel = (): ProductModel => ({
   category: 'any_category',
   price: 3,
   images: [{
-    nameFile: 'any_name',
-    size: 'any_size',
+    name: 'any_name',
+    size: 2,
     key: 'any_key',
     url: 'any_url'
   }],
@@ -22,8 +22,8 @@ export const mockAddProductParams = (): AddProductParams => ({
   category: 'any_category',
   price: 4,
   images: [{
-    nameFile: 'any_name',
-    size: 'any_size',
+    name: 'any_name',
+    size: 2,
     key: 'any_key',
     url: 'any_url'
   }],
@@ -39,8 +39,8 @@ export const mockProducts = (): ProductModel[] => {
       category: 'any_category',
       price: 3,
       images: [{
-        nameFile: 'any_name',
-        size: 'any_size',
+        name: 'any_name',
+        size: 2,
         key: 'any_key',
         url: 'any_url'
       }],
@@ -53,8 +53,8 @@ export const mockProducts = (): ProductModel[] => {
       category: 'any_category2',
       price: 2,
       images: [{
-        nameFile: 'any_name',
-        size: 'any_size',
+        name: 'any_name',
+        size: 2,
         key: 'any_key',
         url: 'any_url'
       }],

@@ -1,6 +1,6 @@
-export type imageData = {
-  nameFile: string
-  size: string
+export type ImageData = {
+  name: string
+  size: number
   key: string
   url: string
 }
@@ -11,6 +11,6 @@ export type ProductModel = {
   description: string
   category: string
   price: number
-  images: imageData[]
+  images: ImageData[]
   createdAt: Date
 }

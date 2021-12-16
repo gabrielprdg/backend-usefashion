@@ -31,8 +31,8 @@ describe('Product Mongo Repository', () => {
         category: 'any_category',
         price: 4,
         images: [{
-          nameFile: 'any_name',
-          size: 'any_size',
+          name: 'any_name',
+          size: 2,
           key: 'any_key',
           url: 'any_url'
         }],
@@ -52,8 +52,8 @@ describe('Product Mongo Repository', () => {
         category: 'any_category',
         price: 4,
         images: [{
-          nameFile: 'any_name',
-          size: 'any_size',
+          name: 'any_name',
+          size: 2,
           key: 'any_key',
           url: 'any_url'
         }],
@@ -76,8 +76,8 @@ describe('Product Mongo Repository', () => {
         category: 'any_category',
         price: 4,
         images: [{
-          nameFile: 'any_name',
-          size: 'any_size',
+          name: 'any_name',
+          size: 2,
           key: 'any_key',
           url: 'any_url'
         }],
@@ -88,8 +88,8 @@ describe('Product Mongo Repository', () => {
         category: 'any_category',
         price: 4,
         images: [{
-          nameFile: 'any_name',
-          size: 'any_size',
+          name: 'any_name',
+          size: 2,
           key: 'any_key',
           url: 'any_url'
         }],
@@ -110,8 +110,8 @@ describe('Product Mongo Repository', () => {
         category: 'any_category',
         price: 4,
         images: [{
-          nameFile: 'any_name',
-          size: 'any_size',
+          name: 'any_name',
+          size: 2,
           key: 'any_key',
           url: 'any_url'
         }],
@@ -122,8 +122,8 @@ describe('Product Mongo Repository', () => {
         category: 'any_category2',
         price: 4,
         images: [{
-          nameFile: 'any_name',
-          size: 'any_size',
+          name: 'any_name',
+          size: 2,
           key: 'any_key',
           url: 'any_url'
         }],

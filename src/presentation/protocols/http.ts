@@ -8,5 +8,5 @@ export type HttpRequest = {
   headers?: any
   params?: any
   accountId?: string
-  file?: any
+  files?: any
 }

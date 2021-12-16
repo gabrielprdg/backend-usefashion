@@ -32,8 +32,8 @@ const makeHttpRequest = ():HttpRequest => ({
     category: 'any_category',
     price: 0,
     images: [{
-      nameFile: 'any_name',
-      size: 'any_size',
+      name: 'any_name',
+      size: 2,
       key: 'any_key',
       url: 'any_url'
     }],
@@ -75,8 +75,8 @@ describe('AddProduct Controller ', () => {
       category: 'any_category',
       price: 0,
       images: [{
-        nameFile: 'any_name',
-        size: 'any_size',
+        name: 'any_name',
+        size: 2,
         key: 'any_key',
         url: 'any_url'
       }],

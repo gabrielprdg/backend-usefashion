@@ -1,11 +1,11 @@
-import { imageData } from '../../../domain/models/product'
+import { ImageData } from '../../../domain/models/product'
 
 export type AddProductParams = {
   name: string
   description: string
   category: string
   price: number
-  images: imageData[]
+  images: ImageData[]
   createdAt: Date
 }
 

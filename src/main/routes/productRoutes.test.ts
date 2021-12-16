@@ -56,8 +56,8 @@ describe('Product Routes', () => {
           category: 'any_category',
           price: 4,
           images: [{
-            nameFile: 'any_name',
-            size: 'any_size',
+            name: 'any_name',
+            size: 2,
             key: 'any_key',
             url: 'any_url'
           }]
@@ -77,8 +77,8 @@ describe('Product Routes', () => {
           category: 'any_category',
           price: 4,
           images: [{
-            nameFile: 'any_name',
-            size: 'any_size',
+            name: 'any_name',
+            size: 2,
             key: 'any_key',
             url: 'any_url'
           }]
@@ -95,8 +95,8 @@ describe('Product Routes', () => {
         category: 'any_category',
         price: 4,
         images: [{
-          nameFile: 'any_name',
-          size: 'any_size',
+          name: 'any_name',
+          size: 2,
           key: 'any_key',
           url: 'any_url'
         }],
