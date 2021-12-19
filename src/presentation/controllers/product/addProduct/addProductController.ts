@@ -20,6 +20,8 @@ export class AddProductController implements Controller {
         return badRequest(error)
       }
 
+      console.log(httpRequest)
+
       const files = httpRequest.files
 
       const images = files.map(item => {
@@ -28,7 +30,7 @@ export class AddProductController implements Controller {
         newi.name = item.originalname
         newi.size = item.size
         newi.key = item.key
-        newi.url = item.url
+        newi.url = item.location
 
         return newi
       })

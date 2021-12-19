@@ -9,7 +9,7 @@ import multer from 'multer'
 import multerConfig from '../config/multer'
 
 export default (router: Router): void => {
-  router.post('/products', adminAuth, multer(multerConfig).array('file', 5), adaptRoute(makeAddProductController()))
+  router.post('/products', adminAuth, multer(multerConfig).array('files', 5), adaptRoute(makeAddProductController()))
   router.get('/products', adaptRoute(makeLoadProductsController()))
   router.get('/product/:id', adaptRoute(makeLoadProductByIdController()))
   router.get('/products/:category', adaptRoute(makeLoadProductsByCategoryController()))

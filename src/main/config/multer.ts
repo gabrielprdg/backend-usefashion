@@ -3,19 +3,26 @@ import crypto from 'crypto'
 import multerS3 from 'multer-s3'
 import path from 'path'
 
+const s3 = new aws.S3({
+  region: process.env.AWS_DEFAULT_REGION,
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+})
+console.log(process.env.AWS_SECRET_ACCESS_KEY)
+
 const storageTypes = {
   s3: multerS3({
-    s3: new aws.S3(),
-    bucket: 'uploadusestore',
+    s3: s3,
+    bucket: 'bucketteste9',
     contentType: multerS3.AUTO_CONTENT_TYPE,
     acl: 'public-read',
     key: (req, file, cb) => {
       crypto.randomBytes(16, (err, hash) => {
         if (err) cb(err)
 
-        file.key = `${hash.toString('hex')}-${file.originalname}`
+        const filename = `${hash.toString('hex')}-${file.originalname}`
 
-        cb(null, file.key)
+        cb(null, filename)
       })
     }
   })
