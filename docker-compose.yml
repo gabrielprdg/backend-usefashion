@@ -8,8 +8,6 @@ services:
       - ./data:/data/db
     ports:
       - "27017:27017"
-    enviroment:
-      - MONGO_URL=mongodb://mongo:27017/usefashionstorelook
   api: 
     container_name: api-container
     build: .
@@ -27,4 +25,5 @@ services:
       - AWS_ACCESS_KEY_ID=AKIAS5GE7TC2YOISPVPX
       - AWS_SECRET_ACCESS_KEY=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
       - PORT=8081
+      - MONGO_URL=mongodb://mongo:27017/usefashionstorelook
       - JWT_SECRET=gunfh4430feoj23ddr2rwgwwt2
