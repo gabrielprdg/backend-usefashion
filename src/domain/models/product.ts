@@ -12,5 +12,6 @@ export type ProductModel = {
   category: string
   price: number
   images: ImageData[]
-  createdAt: Date
+  createdAt: Date,
+  count: number
 }

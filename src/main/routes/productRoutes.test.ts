@@ -5,6 +5,7 @@ import { Collection } from 'mongodb'
 import { sign } from 'jsonwebtoken'
 import env from '../config/env'
 
+
 let productCollection: Collection
 let accountCollection: Collection
 
@@ -71,18 +72,11 @@ describe('Product Routes', () => {
       await request(app)
         .post('/api/products')
         .set('x-access-token', accessToken)
-        .send({
-          name: 'any_name',
-          description: 'any_description',
-          category: 'any_category',
-          price: 4,
-          images: [{
-            name: 'any_name',
-            size: 2,
-            key: 'any_key',
-            url: 'any_url'
-          }]
-        })
+        .field('name', 'any_name')
+        .field('category', 'any_category')
+        .field('price', 4)
+        .field('description', 'any_description')
+        .field('files','../../presentation/test/imagetest.png')
         .expect(204)
     })
   })
@@ -100,7 +94,8 @@ describe('Product Routes', () => {
           key: 'any_key',
           url: 'any_url'
         }],
-        createdAt: new Date()
+        createdAt: new Date(),
+        count: 1
       }])
 
       await request(app)
@@ -121,7 +116,8 @@ describe('Product Routes', () => {
         key: 'any_key',
         url: 'any_url'
       }],
-      createdAt: new Date()
+      createdAt: new Date(),
+      count: 1
     })
 
     await request(app)

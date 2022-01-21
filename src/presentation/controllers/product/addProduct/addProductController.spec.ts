@@ -6,6 +6,7 @@ import { HttpRequest, Validation } from '../../../protocols'
 import { mockValidation } from '../../../test'
 import { mockAddProduct } from '../../../test/mockProduct'
 import { AddProductController } from './addProductController'
+import AWSMock from 'aws-sdk-mock'
 
 type SutTypes = {
   addProductStub : AddProduct
@@ -31,17 +32,33 @@ const makeHttpRequest = ():HttpRequest => ({
     description: 'any_description',
     category: 'any_category',
     price: 0,
+  },
+  files: [{
+    originalname: "any_name",
+    size: 3,
+    key : "any_key",
+    location : "any_url"
+  }]
+})
+
+const makeFakeRequest = (): HttpRequest => ({
+  body: {
+    name: 'any_name',
+    description: 'any_description',
+    category: 'any_category',
+    price: 0,
+    createdAt: new Date(),
+    count: 1,
     images: [{
       name: 'any_name',
-      size: 2,
+      size: 3,
       key: 'any_key',
       url: 'any_url'
-    }],
-    createdAt: new Date()
+    }]
   }
 })
 
-describe('AddProduct Controller ', () => {
+describe('AddProduct Controller', () => {
   beforeAll(() => {
     mockdate.set(new Date())
   })
@@ -68,20 +85,10 @@ describe('AddProduct Controller ', () => {
   test('Should call AddProduct with correct values', async () => {
     const { sut, addProductStub } = makeSut()
     const addSpy = jest.spyOn(addProductStub, 'add')
-    await sut.handle(makeHttpRequest())
-    expect(addSpy).toHaveBeenCalledWith({
-      name: 'any_name',
-      description: 'any_description',
-      category: 'any_category',
-      price: 0,
-      images: [{
-        name: 'any_name',
-        size: 2,
-        key: 'any_key',
-        url: 'any_url'
-      }],
-      createdAt: new Date()
-    })
+    const httpRequest = makeHttpRequest()
+    await sut.handle(httpRequest)
+    const readyRequest = makeFakeRequest()
+    expect(addSpy).toHaveBeenCalledWith(readyRequest.body)
   })
 
   test('Should return 500 if AddProduct throws', async () => {

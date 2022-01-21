@@ -13,7 +13,8 @@ export const mockProductModel = (): ProductModel => ({
     key: 'any_key',
     url: 'any_url'
   }],
-  createdAt: new Date()
+  createdAt: new Date(),
+  count: 1
 })
 
 export const mockAddProductParams = (): AddProductParams => ({
@@ -27,7 +28,8 @@ export const mockAddProductParams = (): AddProductParams => ({
     key: 'any_key',
     url: 'any_url'
   }],
-  createdAt: new Date()
+  createdAt: new Date(),
+  count: 1
 })
 
 export const mockProducts = (): ProductModel[] => {
@@ -44,7 +46,8 @@ export const mockProducts = (): ProductModel[] => {
         key: 'any_key',
         url: 'any_url'
       }],
-      createdAt: new Date()
+      createdAt: new Date(),
+      count: 1
     },
     {
       id: 'any_id2',
@@ -58,7 +61,8 @@ export const mockProducts = (): ProductModel[] => {
         key: 'any_key',
         url: 'any_url'
       }],
-      createdAt: new Date()
+      createdAt: new Date(),
+      count: 1
     }
   ]
 }

@@ -36,7 +36,8 @@ describe('Product Mongo Repository', () => {
           key: 'any_key',
           url: 'any_url'
         }],
-        createdAt: new Date()
+        createdAt: new Date(),
+        count: 1
       })
 
       const product = await productCollection.find({ description: 'any_description' })
@@ -57,7 +58,8 @@ describe('Product Mongo Repository', () => {
           key: 'any_key',
           url: 'any_url'
         }],
-        createdAt: new Date()
+        createdAt: new Date(),
+        count: 1
       })
       const id = res.ops[0]._id
       const sut = makeSut()
@@ -81,7 +83,8 @@ describe('Product Mongo Repository', () => {
           key: 'any_key',
           url: 'any_url'
         }],
-        createdAt: new Date()
+        createdAt: new Date(),
+        count: 1
       }, {
         name: 'any_name2',
         description: 'any_description2',
@@ -93,7 +96,8 @@ describe('Product Mongo Repository', () => {
           key: 'any_key',
           url: 'any_url'
         }],
-        createdAt: new Date()
+        createdAt: new Date(),
+        count: 1
       }])
       const sut = makeSut()
       const products = await sut.loadAll()

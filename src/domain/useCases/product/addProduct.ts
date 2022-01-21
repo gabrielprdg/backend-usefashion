@@ -7,6 +7,7 @@ export type AddProductParams = {
   price: number
   images: ImageData[]
   createdAt: Date
+  count: number
 }
 
 export interface AddProduct {

@@ -20,7 +20,7 @@ export class AddProductController implements Controller {
         return badRequest(error)
       }
 
-      console.log(httpRequest)
+      console.log('man',httpRequest)
 
       const files = httpRequest.files
 
@@ -36,7 +36,7 @@ export class AddProductController implements Controller {
       })
 
       const { name, description, category, price } = httpRequest.body
-      await this.addProduct.add({ name, description, category, price, images, createdAt: new Date() })
+      await this.addProduct.add({ name, description, category, price, images, createdAt: new Date(), count:1 })
 
       return noContent()
     } catch (err) {
