@@ -14,6 +14,7 @@ export class LoadProductByIdController implements Controller {
       const { id } = httpRequest.params
 
       const product = await this.loadProductById.loadById(id)
+      console.log(product)
       if (product) {
         return ok(product)
       } else {
