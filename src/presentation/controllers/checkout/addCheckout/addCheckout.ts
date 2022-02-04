@@ -1,10 +1,11 @@
-import { AddProduct } from '../../../../domain/useCases/product/addProduct'
+import mercadopago from 'mercadopago'
+import { MercadopagoService } from '../../../../infra/checkout/mercadoPago/MercadopagoService'
 import { ServerError } from '../../../errors'
-import { badRequest, noContent, serverError } from '../../../helpers/http/httpHelper'
+import { badRequest, created, noContent, ok, serverError } from '../../../helpers/http/httpHelper'
 import { Controller, HttpRequest, HttpResponse, Validation } from '../../../protocols'
 
-export class AddCheckout implements Controller {
-  private readonly addProduct: AddProduct
+export class AddCheckoutController implements Controller {
+
   private readonly validation: Validation
   constructor (validation: Validation) {
     this.validation = validation
@@ -17,8 +18,28 @@ export class AddCheckout implements Controller {
         return badRequest(error)
       }
 
+      const {
+        token,
+        payment_method_id,
+        transaction_amount,
+        description,
+        installments,
+        email
+      } = httpRequest.body
+    
+      const Mercadopago = new MercadopagoService()
+      const { status, ...rest } = await Mercadopago.execute({
+        token,
+        payment_method_id,
+        transaction_amount,
+        description,
+        installments,
+        email
+      })
 
-      return noContent()
+
+      return ok(rest)
+     
     } catch (err) {
       return serverError(new ServerError())
     }

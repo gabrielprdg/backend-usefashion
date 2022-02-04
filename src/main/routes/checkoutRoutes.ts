@@ -1,9 +1,8 @@
 import { Router } from 'express'
 import { adaptRoute } from '../adapters/expressRouteAdapter'
-import { makeAddCategoryController } from '../factories/controllers/category/addCategory/addCategoryControllerFactory'
 import { makeLoadCategoriesController } from '../factories/controllers/category/loadCategories/addCategoriesControllerFactory'
-import { adminAuth } from '../factories/middlewares/adminAuth'
+import { makeAddCheckoutController } from '../factories/controllers/checkout/addCheckout/addCheckoutControllerFactory'
 
 export default (router: Router): void => {
-  router.get('/process_payment', adaptRoute(makeLoadCategoriesController()))
+  router.post('/process_payment', adaptRoute(makeAddCheckoutController()))
 }
