@@ -1,10 +1,11 @@
 import mercadopago from 'mercadopago'
-import { MercadopagoService } from '../../../../infra/checkout/mercadoPago/MercadopagoService'
+import { MercadopagoServiceWithCreditCard } from '../../../../infra/checkout/creditCardPayment/creditCardPayment'
+
 import { ServerError } from '../../../errors'
 import { badRequest, created, noContent, ok, serverError } from '../../../helpers/http/httpHelper'
 import { Controller, HttpRequest, HttpResponse, Validation } from '../../../protocols'
 
-export class AddCheckoutController implements Controller {
+export class AddCheckoutCreditCardController implements Controller {
 
   private readonly validation: Validation
   constructor (validation: Validation) {
@@ -12,12 +13,13 @@ export class AddCheckoutController implements Controller {
   }
 
   async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
-    try {
+    try{
       const error = this.validation.validate(httpRequest.body)
       if (error) {
         return badRequest(error)
       }
-
+      console.log(httpRequest)
+  
       const {
         token,
         payment_method_id,
@@ -26,9 +28,9 @@ export class AddCheckoutController implements Controller {
         installments,
         email
       } = httpRequest.body
-    
-      const Mercadopago = new MercadopagoService()
-      const { status, ...rest } = await Mercadopago.execute({
+   
+      const Mercadopago = new MercadopagoServiceWithCreditCard()
+      const res = await Mercadopago.executewithCreditCard({
         token,
         payment_method_id,
         transaction_amount,
@@ -36,12 +38,15 @@ export class AddCheckoutController implements Controller {
         installments,
         email
       })
+  
+      mercadopago.configurations.setAccessToken(process.env.ACCESS_TOKEN as string);
 
 
-      return ok(rest)
-     
-    } catch (err) {
-      return serverError(new ServerError())
+
+      return ok(res)
+ 
+    } catch(err) {
+      console.log(err)
     }
   }
 }

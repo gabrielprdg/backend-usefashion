@@ -23,7 +23,7 @@ export class AddProductController implements Controller {
       console.log('man',httpRequest)
 
       const files = httpRequest.files
-
+      console.log(files)
       const images = files.map(item => {
         const newi = {} as ImageData
 
@@ -35,8 +35,8 @@ export class AddProductController implements Controller {
         return newi
       })
 
-      const { name, description, category, price } = httpRequest.body
-      await this.addProduct.add({ name, description, category, price, images, createdAt: new Date(), count:1 })
+      const { name, description, category, price, colors, productSize} = httpRequest.body
+      await this.addProduct.add({ name, description, category, price, colors, productSize, images, createdAt: new Date(), count:1 })
 
       return noContent()
     } catch (err) {

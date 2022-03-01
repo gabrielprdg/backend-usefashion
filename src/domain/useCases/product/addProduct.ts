@@ -7,6 +7,8 @@ export type AddProductParams = {
   price: number
   images: ImageData[]
   createdAt: Date
+  colors: string[]
+  productSize: string[]
   count: number
 }
 

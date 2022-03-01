@@ -5,6 +5,7 @@ export type ImageData = {
   url: string
 }
 
+
 export type ProductModel = {
   id: string
   name: string
@@ -13,5 +14,7 @@ export type ProductModel = {
   price: number
   images: ImageData[]
   createdAt: Date,
+  colors: string[]
+  productSize: string[]
   count: number
 }
