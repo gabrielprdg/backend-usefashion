@@ -47,6 +47,7 @@ class MercadopagoServiceWithTicktet {
       const { status, response } = data
 
       return {
+        status,
         response
       }
     })

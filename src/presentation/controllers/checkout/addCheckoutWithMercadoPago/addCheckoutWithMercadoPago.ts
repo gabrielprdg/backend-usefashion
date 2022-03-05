@@ -1,11 +1,12 @@
 import mercadopago from 'mercadopago'
-import { MercadopagoServiceWithTicktet } from '../../../../infra/checkout/ticketPayment/ticketPayment'
+import { MercadopagoServiceWithCreditCard } from '../../../../infra/checkout/creditCardPayment/creditCardPayment'
+import { MercadopagoService } from '../../../../infra/checkout/mercadoPagoPayment/mercadoPagoPayment'
 
 import { ServerError } from '../../../errors'
 import { badRequest, created, noContent, ok, serverError } from '../../../helpers/http/httpHelper'
 import { Controller, HttpRequest, HttpResponse, Validation } from '../../../protocols'
 
-export class AddCheckoutTicketController implements Controller {
+export class AddCheckoutMercadoPagoController implements Controller {
 
   private readonly validation: Validation
   constructor (validation: Validation) {
@@ -21,23 +22,13 @@ export class AddCheckoutTicketController implements Controller {
       console.log(httpRequest)
   
       const {
-        transaction_amount,
-        description,
-        payment_method_id,
-        payer
+        preference
       } = httpRequest.body
    
-      const Mercadopago = new MercadopagoServiceWithTicktet()
-      const res = await Mercadopago.executeWithTicket({
-        transaction_amount,
-        description,
-        payment_method_id,
-        payer
+      const Mercadopago = new MercadopagoService()
+      const res = await Mercadopago.executeWithMercadoPago({
+        preference
       })
-  
-  
-
-
 
       return ok(res)
  

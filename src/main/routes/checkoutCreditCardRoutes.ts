@@ -1,8 +1,7 @@
 import { Router } from 'express'
 import { adaptRoute } from '../adapters/expressRouteAdapter'
-import { makeLoadCategoriesController } from '../factories/controllers/category/loadCategories/addCategoriesControllerFactory'
-import { makeAddCheckoutController } from '../factories/controllers/checkout/addCheckout/addCheckoutControllerFactory'
+import { makeAddCheckoutCreditCardController } from '../factories/controllers/checkout/addCheckoutWithCreditCard/addCheckoutCreditCardControllerFactory'
 
 export default (router: Router): void => {
-  router.post('/process_payment', adaptRoute(makeAddCheckoutController()))
+  router.post('/process_payment', adaptRoute(makeAddCheckoutCreditCardController()))
 }
