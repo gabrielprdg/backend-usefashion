@@ -5,6 +5,3 @@ data
 docker-compose.yml
 Dockerfile
 .env
-*.spec.ts
-*.test.ts
-**/test

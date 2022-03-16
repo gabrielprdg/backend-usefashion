@@ -17,5 +17,5 @@ export const mockAddAccountParams = (): AddAccountParams => ({
 
 export const mockFakeAuthentication = (): AuthenticationParams => ({
   email: 'any_email@gmail.com',
-  password: 'any_password'
+  password: 'any_passwor'
 })
