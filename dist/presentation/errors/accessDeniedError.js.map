@@ -1,0 +1,1 @@
+{"version":3,"file":"accessDeniedError.js","sourceRoot":"","sources":["../../../src/presentation/errors/accessDeniedError.ts"],"names":[],"mappings":";;;AAAA,MAAa,iBAAkB,SAAQ,KAAK;IAC1C;QACE,KAAK,CAAC,eAAe,CAAC,CAAA;QACtB,IAAI,CAAC,IAAI,GAAG,mBAAmB,CAAA;IACjC,CAAC;CACF;AALD,8CAKC"}
