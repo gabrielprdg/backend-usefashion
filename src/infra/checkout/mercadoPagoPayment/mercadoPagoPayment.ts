@@ -24,7 +24,9 @@ class MercadopagoService {
     preference
   }: MercadoPagoRequest): Promise<any> {
     mercadopago.configure({
-      access_token: process.env.ACCESS_TOKEN as string
+      access_token: `${process.env.ACCESS_TOKEN}`,
+      client_id: `${process.env.CLIENT_ID}`,
+      client_secret: `${process.env.CLIENT_SECRET}`
     });
 
     const {status, response} = await mercadopago.preferences.create(preference)

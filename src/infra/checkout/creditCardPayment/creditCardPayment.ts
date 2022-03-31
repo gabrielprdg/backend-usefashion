@@ -55,7 +55,7 @@ class MercadopagoServiceWithCreditCard {
   }: IOrderRequest): Promise<IResultResponseMp> {
     console.log('acstoken',process.env.ACCESS_TOKEN as string)
     mercadopago.configurations.setAccessToken(
-      process.env.ACCESS_TOKEN as string
+      `${process.env.ACCESS_TOKEN}`
     )
 
     return await mercadopago.payment

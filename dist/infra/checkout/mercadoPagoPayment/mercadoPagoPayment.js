@@ -29,7 +29,9 @@ dotenv.config();
 class MercadopagoService {
     async executeWithMercadoPago({ preference }) {
         mercadopago_1.default.configure({
-            access_token: process.env.ACCESS_TOKEN_PROD
+            access_token: `${process.env.ACCESS_TOKEN}`,
+            client_id: `${process.env.CLIENT_ID}`,
+            client_secret: `${process.env.CLIENT_SECRET}`
         });
         const { status, response } = await mercadopago_1.default.preferences.create(preference);
         return { status, response };

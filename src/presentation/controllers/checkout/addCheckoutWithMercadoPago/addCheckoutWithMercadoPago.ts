@@ -1,10 +1,7 @@
-import mercadopago from 'mercadopago'
-import { MercadopagoServiceWithCreditCard } from '../../../../infra/checkout/creditCardPayment/creditCardPayment'
 import { MercadopagoService } from '../../../../infra/checkout/mercadoPagoPayment/mercadoPagoPayment'
-
-import { ServerError } from '../../../errors'
-import { badRequest, created, noContent, ok, serverError } from '../../../helpers/http/httpHelper'
+import { badRequest, ok } from '../../../helpers/http/httpHelper'
 import { Controller, HttpRequest, HttpResponse, Validation } from '../../../protocols'
+
 
 export class AddCheckoutMercadoPagoController implements Controller {
 
@@ -20,6 +17,7 @@ export class AddCheckoutMercadoPagoController implements Controller {
         return badRequest(error)
       }
       console.log(httpRequest)
+      
   
       const {
         preference

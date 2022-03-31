@@ -14,11 +14,15 @@ export class AddCheckoutCreditCardController implements Controller {
 
   async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
     try{
+      mercadopago.configurations.setAccessToken(`${process.env.ACCESS_TOKEN}`);
+      
       const error = this.validation.validate(httpRequest.body)
       if (error) {
         return badRequest(error)
       }
       console.log(httpRequest)
+      console.log('AT',process.env.ACCESS_TOKEN)
+      console.log('ci',process.env.CLIENT_ID)
   
       const {
         token,
@@ -38,8 +42,6 @@ export class AddCheckoutCreditCardController implements Controller {
         installments,
         email
       })
-  
-      mercadopago.configurations.setAccessToken(process.env.ACCESS_TOKEN as string);
 
 
 

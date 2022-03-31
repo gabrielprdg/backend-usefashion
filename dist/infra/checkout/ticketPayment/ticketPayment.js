@@ -28,7 +28,7 @@ const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 class MercadopagoServiceWithTicktet {
     async executeWithTicket({ transaction_amount, description, payment_method_id, payer }) {
-        mercadopago_1.default.configurations.setAccessToken(process.env.ACCESS_TOKEN);
+        mercadopago_1.default.configurations.setAccessToken(`${process.env.ACCESS_TOKEN}`);
         return await mercadopago_1.default.payment
             .create({
             transaction_amount,

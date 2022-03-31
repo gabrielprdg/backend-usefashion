@@ -13,11 +13,14 @@ class AddCheckoutCreditCardController {
     }
     async handle(httpRequest) {
         try {
+            mercadopago_1.default.configurations.setAccessToken(`${process.env.ACCESS_TOKEN}`);
             const error = this.validation.validate(httpRequest.body);
             if (error) {
                 return (0, httpHelper_1.badRequest)(error);
             }
             console.log(httpRequest);
+            console.log('AT', process.env.ACCESS_TOKEN);
+            console.log('ci', process.env.CLIENT_ID);
             const { token, payment_method_id, transaction_amount, description, installments, email } = httpRequest.body;
             const Mercadopago = new creditCardPayment_1.MercadopagoServiceWithCreditCard();
             const res = await Mercadopago.executewithCreditCard({
@@ -28,7 +31,6 @@ class AddCheckoutCreditCardController {
                 installments,
                 email
             });
-            mercadopago_1.default.configurations.setAccessToken(process.env.ACCESS_TOKEN);
             return (0, httpHelper_1.ok)(res);
         }
         catch (err) {
