@@ -31,6 +31,7 @@ class AddCheckoutCreditCardController {
                 installments,
                 email
             });
+            console.log(res);
             return (0, httpHelper_1.ok)(res);
         }
         catch (err) {
