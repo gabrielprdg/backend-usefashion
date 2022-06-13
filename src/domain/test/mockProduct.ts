@@ -14,7 +14,9 @@ export const mockProductModel = (): ProductModel => ({
     url: 'any_url'
   }],
   createdAt: new Date(),
-  count: 1
+  count: 1,
+  productSize: ['size1', 'size2'],
+  colors: ['color1', 'color2']
 })
 
 export const mockAddProductParams = (): AddProductParams => ({
@@ -29,7 +31,9 @@ export const mockAddProductParams = (): AddProductParams => ({
     url: 'any_url'
   }],
   createdAt: new Date(),
-  count: 1
+  count: 1,
+  productSize: ['size1', 'size2'],
+  colors: ['color1', 'color2']
 })
 
 export const mockProducts = (): ProductModel[] => {
@@ -47,7 +51,9 @@ export const mockProducts = (): ProductModel[] => {
         url: 'any_url'
       }],
       createdAt: new Date(),
-      count: 1
+      count: 1,
+      productSize: ['size1', 'size2'],
+      colors: ['color1', 'color2']
     },
     {
       id: 'any_id2',
@@ -62,7 +68,9 @@ export const mockProducts = (): ProductModel[] => {
         url: 'any_url'
       }],
       createdAt: new Date(),
-      count: 1
+      count: 1,
+      productSize: ['size1', 'size2'],
+      colors: ['color1', 'color2'] 
     }
   ]
 }
