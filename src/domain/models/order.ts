@@ -1,28 +1,47 @@
 export type User = {
-  name: string
+  email: string
+  firstName: string
   surname: string
   telephone: string
+  address: Address
+  doc: string
 }
 
 export type Address = {
-  street: string
-  number: string
+  streetName: string
+  streetNumber: string
   complement: string
   district: string
+  cep: string
+  state: string
 }
 
 
-export type PurchasedProduct = {
+export type Images = {
   name: string
-  price: string
-  color: string
-  size: string
+  size: number
+  key: string
+  url: string
+}
+
+export type PurchasedProduct = {
+  id: string
+  images: Array<Images>
+  name: string
+  description: string
+  price: number
+  colors?: string
+  count: number
+  productSize?: string
+  shippingType: string
 }
 
 
 export interface OrderModel {
+  id: string
   user: User
   product: PurchasedProduct
   address: Address 
   status: string
+  shippingType: string
 }

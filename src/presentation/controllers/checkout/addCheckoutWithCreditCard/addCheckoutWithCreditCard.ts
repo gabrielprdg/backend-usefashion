@@ -43,7 +43,7 @@ export class AddCheckoutCreditCardController implements Controller {
         email
       })
 
-      console.log(res)
+      console.log('3',res)
 
       return ok(res)
  

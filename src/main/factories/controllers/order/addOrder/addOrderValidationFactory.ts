@@ -3,7 +3,7 @@ import { RequiredFieldValidation, ValidationComposite } from '../../../../../val
 
 export const makeAddOrderValidation = (): ValidationComposite => {
   const validations: Validation[] = []
-  for (const field of ['user', 'product', 'address', 'status']) {
+  for (const field of ['user', 'product', 'address', 'status', 'shippingType']) {
     validations.push(new RequiredFieldValidation(field))
   }
   return new ValidationComposite(validations)

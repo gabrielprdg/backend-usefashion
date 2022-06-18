@@ -24,8 +24,8 @@ export class AddOrderController implements Controller {
         return badRequest(error)
       }
 
-      const { user, product, address, status } = httpRequest.body
-      await this.addOrder.add({user, product, address, status})
+      const { user, product, status } = httpRequest.body
+      await this.addOrder.add({user, product, status})
 
       return noContent()
     } catch (err) {

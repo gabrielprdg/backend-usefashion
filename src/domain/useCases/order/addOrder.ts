@@ -9,6 +9,7 @@ export type AddOrderParams = {
   product: PurchasedProduct
   address: Address 
   status: string
+  shippingType: string
 }
 
 export interface AddOrder {
