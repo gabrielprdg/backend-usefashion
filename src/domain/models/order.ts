@@ -41,7 +41,4 @@ export interface OrderModel {
   id: string
   user: User
   product: PurchasedProduct
-  address: Address 
-  status: string
-  shippingType: string
 }

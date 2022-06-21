@@ -7,9 +7,6 @@ import {
 export type AddOrderParams = {
   user: User
   product: PurchasedProduct
-  address: Address 
-  status: string
-  shippingType: string
 }
 
 export interface AddOrder {
