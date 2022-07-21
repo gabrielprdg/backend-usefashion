@@ -1,4 +1,4 @@
-import { AddOrder } from "../../../../domain/useCases/order/addOrder";
+import { LoadOrders } from "../../../../domain/useCases/order/loadOrders";
 import { ServerError } from "../../../errors";
 import { noContent, serverError } from "../../../helpers/http/httpHelper";
 import {
@@ -7,19 +7,18 @@ import {
   HttpResponse
 } from "../../../protocols";
 
-export class AddOrderController implements Controller {
+export class LoadOrdersController implements Controller {
+  private readonly loadOrders: LoadOrders
 
-  private readonly addOrder: AddOrder 
-
-  constructor(addOrder: AddOrder) {
-    this.addOrder = addOrder
+  constructor(loadOrders: LoadOrders) {
+    this.loadOrders = loadOrders
   }
 
   async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
     try {
       
       const { user, product } = httpRequest.body
-      await this.addOrder.add({user, product})
+      const orders = await this.loadOrders.loadAll()
 
       return noContent()
     } catch (err) {

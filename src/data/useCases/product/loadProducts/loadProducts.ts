@@ -4,8 +4,8 @@ import { LoadProductsRepository } from '../../../protocols/db/product/loadProduc
 
 export class DbLoadProducts implements LoadProducts {
   private readonly loadProductsRepository: LoadProductsRepository
-  constructor (loadProdutsRepository: LoadProductsRepository) {
-    this.loadProductsRepository = loadProdutsRepository
+  constructor (loadProductsRepository: LoadProductsRepository) {
+    this.loadProductsRepository = loadProductsRepository
   }
 
   async loadAll (): Promise<ProductModel[]> {

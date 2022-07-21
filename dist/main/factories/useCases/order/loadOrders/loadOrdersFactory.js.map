@@ -1,0 +1,1 @@
+{"version":3,"file":"loadOrdersFactory.js","sourceRoot":"","sources":["../../../../../../src/main/factories/useCases/order/loadOrders/loadOrdersFactory.ts"],"names":[],"mappings":";;;AAAA,6FAA0F;AAE1F,qGAAkG;AAE3F,MAAM,gBAAgB,GAAG,GAAc,EAAE;IAC9C,MAAM,oBAAoB,GAAG,IAAI,2CAAoB,EAAE,CAAA;IACvD,OAAO,IAAI,2BAAY,CAAC,oBAAoB,CAAC,CAAA;AAC/C,CAAC,CAAA;AAHY,QAAA,gBAAgB,oBAG5B"}

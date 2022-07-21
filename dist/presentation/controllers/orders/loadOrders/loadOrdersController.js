@@ -1,16 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AddOrderController = void 0;
+exports.LoadOrdersController = void 0;
 const errors_1 = require("../../../errors");
 const httpHelper_1 = require("../../../helpers/http/httpHelper");
-class AddOrderController {
-    constructor(addOrder) {
-        this.addOrder = addOrder;
+class LoadOrdersController {
+    constructor(loadOrders) {
+        this.loadOrders = loadOrders;
     }
     async handle(httpRequest) {
         try {
             const { user, product } = httpRequest.body;
-            await this.addOrder.add({ user, product });
+            const orders = await this.loadOrders.loadAll();
             return (0, httpHelper_1.noContent)();
         }
         catch (err) {
@@ -18,5 +18,5 @@ class AddOrderController {
         }
     }
 }
-exports.AddOrderController = AddOrderController;
-//# sourceMappingURL=addOrderController.js.map
+exports.LoadOrdersController = LoadOrdersController;
+//# sourceMappingURL=loadOrdersController.js.map

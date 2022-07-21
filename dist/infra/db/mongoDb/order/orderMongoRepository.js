@@ -7,6 +7,11 @@ class OrderMongoRepository {
         const orderCollection = await mongoHelper_1.mongoHelper.getCollection('orders');
         await orderCollection.insertOne(orderData);
     }
+    async loadAll() {
+        const orderCollection = await mongoHelper_1.mongoHelper.getCollection('orders');
+        const orders = await orderCollection.find().toArray();
+        return mongoHelper_1.mongoHelper.mapCollection(orders); //helper que mapea os objetos facilitando a leitura de dados
+    }
 }
 exports.OrderMongoRepository = OrderMongoRepository;
 //# sourceMappingURL=orderMongoRepository.js.map
