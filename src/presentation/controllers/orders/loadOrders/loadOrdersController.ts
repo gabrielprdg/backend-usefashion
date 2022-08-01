@@ -1,6 +1,6 @@
 import { LoadOrders } from "../../../../domain/useCases/order/loadOrders";
 import { ServerError } from "../../../errors";
-import { noContent, serverError } from "../../../helpers/http/httpHelper";
+import { noContent, ok, serverError } from "../../../helpers/http/httpHelper";
 import {
   Controller,
   HttpRequest,
@@ -16,11 +16,10 @@ export class LoadOrdersController implements Controller {
 
   async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
     try {
-      
-      const { user, product } = httpRequest.body
+    
       const orders = await this.loadOrders.loadAll()
 
-      return noContent()
+      return orders.length ? ok(orders) : noContent()
     } catch (err) {
       return serverError(new ServerError())
     }

@@ -9,9 +9,8 @@ class LoadOrdersController {
     }
     async handle(httpRequest) {
         try {
-            const { user, product } = httpRequest.body;
             const orders = await this.loadOrders.loadAll();
-            return (0, httpHelper_1.noContent)();
+            return orders.length ? (0, httpHelper_1.ok)(orders) : (0, httpHelper_1.noContent)();
         }
         catch (err) {
             return (0, httpHelper_1.serverError)(new errors_1.ServerError());
