@@ -1,7 +1,6 @@
-import { 
-  Address,
+import {
   PurchasedProduct,
-  User 
+  User
 } from '../../models/order'
 
 export type AddOrderParams = {

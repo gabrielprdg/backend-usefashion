@@ -10,7 +10,7 @@ class OrderMongoRepository {
     async loadAll() {
         const orderCollection = await mongoHelper_1.mongoHelper.getCollection('orders');
         const orders = await orderCollection.find().toArray();
-        return mongoHelper_1.mongoHelper.mapCollection(orders); //helper que mapea os objetos facilitando a leitura de dados
+        return mongoHelper_1.mongoHelper.mapCollection(orders); // helper que mapea os objetos facilitando a leitura de dados
     }
 }
 exports.OrderMongoRepository = OrderMongoRepository;

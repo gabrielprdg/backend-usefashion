@@ -6,8 +6,9 @@ import { ProductModel } from '../../../../domain/models/product'
 import { AddProductParams } from '../../../../domain/useCases/product/addProduct'
 import { mongoHelper } from '../helper/mongoHelper'
 import { ObjectId } from 'mongodb'
+import { DeleteProductByIdRepository } from '../../../../data/protocols/db/product/deleteProductByIdRepository'
 
-export class ProductMongoRepository implements AddProductRepository, LoadProductByIdRepository, LoadProductsByCategoryRepository, LoadProductsRepository {
+export class ProductMongoRepository implements AddProductRepository, LoadProductByIdRepository, LoadProductsByCategoryRepository, LoadProductsRepository, DeleteProductByIdRepository {
   async add (productData: AddProductParams): Promise<void> {
     const productCollection = await mongoHelper.getCollection('products')
     await productCollection.insertOne(productData)
@@ -29,5 +30,10 @@ export class ProductMongoRepository implements AddProductRepository, LoadProduct
     const productCollection = await mongoHelper.getCollection('products')
     const products = await productCollection.find().toArray()
     return mongoHelper.mapCollection(products)
+  }
+
+  async deleteById (id: string): Promise<void> {
+    const productCollection = await mongoHelper.getCollection('products')
+    await productCollection.deleteOne({ _id: new ObjectId(id) })
   }
 }

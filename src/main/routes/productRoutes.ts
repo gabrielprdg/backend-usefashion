@@ -7,10 +7,12 @@ import { makeLoadProductsByCategoryController } from '../factories/controllers/p
 import { adminAuth } from '../factories/middlewares/adminAuth'
 import multer from 'multer'
 import multerConfig from '../config/multer'
+import { makeDeleteProductByIdController } from '../factories/controllers/product/deleteProductById/deleteProductByIdControllerFactory'
 
 export default (router: Router): void => {
   router.post('/products', adminAuth, multer(multerConfig).array('files', 5), adaptRoute(makeAddProductController()))
   router.get('/products', adaptRoute(makeLoadProductsController()))
   router.get('/product/:id', adaptRoute(makeLoadProductByIdController()))
   router.get('/products/:category', adaptRoute(makeLoadProductsByCategoryController()))
+  router.delete('/products/:productId', adaptRoute(makeDeleteProductByIdController()))
 }

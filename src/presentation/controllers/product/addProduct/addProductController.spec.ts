@@ -6,7 +6,6 @@ import { HttpRequest, Validation } from '../../../protocols'
 import { mockValidation } from '../../../test'
 import { mockAddProduct } from '../../../test/mockProduct'
 import { AddProductController } from './addProductController'
-import AWSMock from 'aws-sdk-mock'
 
 type SutTypes = {
   addProductStub : AddProduct
@@ -31,13 +30,13 @@ const makeHttpRequest = ():HttpRequest => ({
     name: 'any_name',
     description: 'any_description',
     category: 'any_category',
-    price: 0,
+    price: 0
   },
   files: [{
-    originalname: "any_name",
+    originalname: 'any_name',
     size: 3,
-    key : "any_key",
-    location : "any_url"
+    key: 'any_key',
+    location: 'any_url'
   }]
 })
 

@@ -1,12 +1,3 @@
-export type User = {
-  email: string
-  firstName: string
-  surname: string
-  telephone: string
-  address: Address
-  doc: string
-}
-
 export type Address = {
   streetName: string
   streetNumber: string
@@ -16,6 +7,14 @@ export type Address = {
   state: string
 }
 
+export type User = {
+  email: string
+  firstName: string
+  surname: string
+  telephone: string
+  address: Address
+  doc: string
+}
 
 export type Images = {
   name: string
@@ -35,7 +34,6 @@ export type PurchasedProduct = {
   productSize?: string
   shippingType: string
 }
-
 
 export interface OrderModel {
   id: string

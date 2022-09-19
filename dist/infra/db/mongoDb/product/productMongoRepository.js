@@ -23,6 +23,10 @@ class ProductMongoRepository {
         const products = await productCollection.find().toArray();
         return mongoHelper_1.mongoHelper.mapCollection(products);
     }
+    async deleteById(id) {
+        const productCollection = await mongoHelper_1.mongoHelper.getCollection('products');
+        await productCollection.deleteOne({ _id: new mongodb_1.ObjectId(id) });
+    }
 }
 exports.ProductMongoRepository = ProductMongoRepository;
 //# sourceMappingURL=productMongoRepository.js.map
