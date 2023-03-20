@@ -22,7 +22,6 @@ class SignUpController {
                 return (0, httpHelper_1.forbidden)(new emailInUseError_1.EmailInUseError());
             }
             const { accessToken, user } = await this.authentication.auth({ email, password });
-            console.log('oi', user);
             return (0, httpHelper_1.ok)({ accessToken, user });
         }
         catch (error) {

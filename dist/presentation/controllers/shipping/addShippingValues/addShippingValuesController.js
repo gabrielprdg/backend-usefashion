@@ -6,8 +6,8 @@ const httpHelper_1 = require("../../../helpers/http/httpHelper");
 class AddShippingValuesController {
     async handle(httpRequest) {
         try {
-            const { sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nCdServico, //Array com os códigos de serviço
-            nVlDiametro, } = httpRequest.body;
+            const { sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nCdServico, // Array com os códigos de serviço
+            nVlDiametro } = httpRequest.body;
             const ShippingValues = new shippingValue_1.ShippingDetails();
             const res = await ShippingValues.loadPriceData({
                 sCepOrigem,
@@ -18,9 +18,8 @@ class AddShippingValuesController {
                 nVlAltura,
                 nVlLargura,
                 nCdServico,
-                nVlDiametro,
+                nVlDiametro
             });
-            console.log(res);
             return (0, httpHelper_1.ok)(res);
         }
         catch (err) {

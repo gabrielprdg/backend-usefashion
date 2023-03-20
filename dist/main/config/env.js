@@ -6,9 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 exports.default = {
-    mongoUrl: process.env.MONGO_URL || 'mongodb://mongo:27017/usefashionstorelook',
+    mongoUrl: process.env.MONGO_URL || 'mongodb://mongo:27017/useprod',
     port: process.env.PORT || 8081,
     jwtSecret: process.env.JWT_SECRET || 'gunfh4430feoj23ddr2rwgwwt2'
 };
-console.log(process.env.MONGO_URL);
 //# sourceMappingURL=env.js.map

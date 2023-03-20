@@ -20,7 +20,6 @@ class LoginController {
             if (!accessToken) {
                 return (0, httpHelper_1.unauthorized)();
             }
-            console.log(user);
             return (0, httpHelper_1.ok)({ accessToken, user });
         }
         catch (err) {

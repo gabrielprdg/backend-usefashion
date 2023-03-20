@@ -13,7 +13,6 @@ class AddCheckoutMercadoPagoController {
             if (error) {
                 return (0, httpHelper_1.badRequest)(error);
             }
-            console.log(httpRequest);
             const { preference } = httpRequest.body;
             const Mercadopago = new mercadoPagoPayment_1.MercadopagoService();
             const res = await Mercadopago.executeWithMercadoPago({

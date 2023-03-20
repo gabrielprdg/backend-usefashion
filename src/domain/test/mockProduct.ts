@@ -70,7 +70,7 @@ export const mockProducts = (): ProductModel[] => {
       createdAt: new Date(),
       count: 1,
       productSize: ['size1', 'size2'],
-      colors: ['color1', 'color2'] 
+      colors: ['color1', 'color2']
     }
   ]
 }

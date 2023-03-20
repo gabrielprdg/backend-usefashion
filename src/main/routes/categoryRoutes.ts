@@ -8,5 +8,5 @@ import { adminAuth } from '../factories/middlewares/adminAuth'
 export default (router: Router): void => {
   router.post('/categories', adminAuth, adaptRoute(makeAddCategoryController()))
   router.get('/categories', adaptRoute(makeLoadCategoriesController()))
-  router.delete('/categories/:categoryId', adaptRoute(makeDeleteCategoryByIdController()))
+  router.delete('/categories/:categoryId', adminAuth, adaptRoute(makeDeleteCategoryByIdController()))
 }

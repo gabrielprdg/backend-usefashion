@@ -15,9 +15,7 @@ class AddProductController {
             if (error) {
                 return (0, httpHelper_1.badRequest)(error);
             }
-            console.log('man', httpRequest);
             const files = httpRequest.files;
-            console.log(files);
             const images = files.map(item => {
                 const newi = {};
                 newi.name = item.originalname;

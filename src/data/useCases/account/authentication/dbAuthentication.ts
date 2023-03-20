@@ -4,8 +4,7 @@ import {
   HashComparer,
   Encrypter,
   LoadAccountByEmailRepository,
-  UpdateAccessTokenRepository,
-  AuthData
+  UpdateAccessTokenRepository
 } from './dbAuthenticationProtocols'
 
 export class DbAthentication implements Authentication {
@@ -26,21 +25,14 @@ export class DbAthentication implements Authentication {
     this.updateAccessTokenRepository = updateAccessTokenRepository
   }
 
-  async auth (authentication: AuthenticationParams): Promise<AuthData> {
+  async auth (authentication: AuthenticationParams): Promise<string> {
     const account = await this.loadAccountByEmailRepository.loadByEmail(authentication.email)
     if (account) {
       const isValid = await this.hashComparer.compare(authentication.password, account.password)
       if (isValid) {
         const accessToken = await this.encrypter.encrypt(account.id)
         await this.updateAccessTokenRepository.updateAccessToken(account.id, accessToken)
-        return {
-          accessToken,
-          user: {
-            name: account.name,
-            email: account.email,
-            role: account.role
-          } 
-        }
+        return accessToken
       }
     }
     return null

@@ -28,7 +28,6 @@ const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 class MercadopagoServiceWithCreditCard {
     async executewithCreditCard({ transaction_amount, token, description, installments, payment_method_id, email }) {
-        console.log('acstoken', process.env.ACCESS_TOKEN);
         mercadopago_1.default.configurations.setAccessToken(`${process.env.ACCESS_TOKEN}`);
         return await mercadopago_1.default.payment
             .save({

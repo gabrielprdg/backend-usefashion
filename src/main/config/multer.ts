@@ -9,7 +9,6 @@ const s3 = new aws.S3({
   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
 })
 
-
 const storageTypes = {
   s3: multerS3({
     s3: s3,

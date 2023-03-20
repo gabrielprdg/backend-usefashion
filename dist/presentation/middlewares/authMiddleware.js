@@ -12,7 +12,6 @@ class AuthMiddleware {
         var _a;
         try {
             const accessToken = (_a = httpRequest.headers) === null || _a === void 0 ? void 0 : _a['x-access-token'];
-            console.log(accessToken);
             if (accessToken) {
                 const account = await this.loadAccountByToken.load(accessToken, this.role);
                 if (account) {

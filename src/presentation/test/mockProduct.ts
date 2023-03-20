@@ -1,6 +1,7 @@
 import { ProductModel } from '../../domain/models/product'
 import { mockProductModel, mockProducts } from '../../domain/test/mockProduct'
 import { AddProduct, AddProductParams } from '../../domain/useCases/product/addProduct'
+import { DeleteProductById } from '../../domain/useCases/product/deleteProductById'
 import { LoadProductById } from '../../domain/useCases/product/loadProductById'
 import { LoadProducts } from '../../domain/useCases/product/loadProducts'
 import { LoadProductsByCategory } from '../../domain/useCases/product/loadProductsByCategory'
@@ -43,4 +44,14 @@ export const mockLoadProductsByCategory = (): LoadProductsByCategory => {
   }
 
   return new LoadProductsByCategory()
+}
+
+export const mockDeleteProductById = (): DeleteProductById => {
+  class DeleteProductById implements DeleteProductById {
+    async delete (string: string): Promise<void> {
+      return Promise.resolve()
+    }
+  }
+
+  return new DeleteProductById()
 }

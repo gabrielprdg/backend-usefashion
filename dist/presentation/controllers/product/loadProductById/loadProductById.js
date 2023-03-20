@@ -11,7 +11,6 @@ class LoadProductByIdController {
         try {
             const { id } = httpRequest.params;
             const product = await this.loadProductById.loadById(id);
-            console.log(product);
             if (product) {
                 return (0, httpHelper_1.ok)(product);
             }

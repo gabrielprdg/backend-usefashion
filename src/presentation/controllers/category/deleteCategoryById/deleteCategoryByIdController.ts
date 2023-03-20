@@ -1,5 +1,5 @@
 import { DeleteCategoryById } from '../../../../domain/useCases/category/deleteCategoryById'
-import { noContent } from '../../../helpers/http/httpHelper'
+import { noContent, serverError } from '../../../helpers/http/httpHelper'
 import { Controller, HttpRequest, HttpResponse } from '../../../protocols'
 
 export class DeleteCategoryByIdController implements Controller {
@@ -10,9 +10,13 @@ export class DeleteCategoryByIdController implements Controller {
   }
 
   async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
-    const { categoryId } = httpRequest.params
+    try {
+      const { categoryId } = httpRequest.params
 
-    await this.deleteCategoryById.delete(categoryId)
-    return noContent()
+      await this.deleteCategoryById.delete(categoryId)
+      return noContent()
+    } catch (err) {
+      return serverError(err)
+    }
   }
 }

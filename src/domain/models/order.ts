@@ -8,6 +8,7 @@ export type Address = {
 }
 
 export type User = {
+  id: string
   email: string
   firstName: string
   surname: string
@@ -25,7 +26,6 @@ export type Images = {
 
 export type PurchasedProduct = {
   id: string
-  images: Array<Images>
   name: string
   description: string
   price: number
@@ -39,4 +39,5 @@ export interface OrderModel {
   id: string
   user: User
   product: PurchasedProduct
+  created_at: Date
 }

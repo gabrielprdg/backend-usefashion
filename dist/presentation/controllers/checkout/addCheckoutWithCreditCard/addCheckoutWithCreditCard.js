@@ -18,9 +18,6 @@ class AddCheckoutCreditCardController {
             if (error) {
                 return (0, httpHelper_1.badRequest)(error);
             }
-            console.log(httpRequest);
-            console.log('AT', process.env.ACCESS_TOKEN);
-            console.log('ci', process.env.CLIENT_ID);
             const { token, payment_method_id, transaction_amount, description, installments, email } = httpRequest.body;
             const Mercadopago = new creditCardPayment_1.MercadopagoServiceWithCreditCard();
             const res = await Mercadopago.executewithCreditCard({
@@ -31,7 +28,6 @@ class AddCheckoutCreditCardController {
                 installments,
                 email
             });
-            console.log('3', res);
             return (0, httpHelper_1.ok)(res);
         }
         catch (err) {

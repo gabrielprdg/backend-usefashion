@@ -4,27 +4,6 @@ import * as dotenv from 'dotenv'
 
 dotenv.config()
 
-
-type IndentificationType = {
-  type: string
-  number: string
-}
-
-type payerType = {
-  email: string
-  first_name: string
-  last_name: string
-  identification: IndentificationType 
-}
-
-interface TicketRequest {
-  transaction_amount: number
-  description: string
-  payment_method_id: string
-  payer: payerType
-
-}
-
 interface IOrderRequest {
   transaction_amount: number
   token: string
@@ -45,7 +24,7 @@ interface IResultResponseMp {
 }
 
 class MercadopagoServiceWithCreditCard {
-  async executewithCreditCard({
+  async executewithCreditCard ({
     transaction_amount,
     token,
     description,
@@ -53,7 +32,6 @@ class MercadopagoServiceWithCreditCard {
     payment_method_id,
     email
   }: IOrderRequest): Promise<IResultResponseMp> {
-    console.log('acstoken',process.env.ACCESS_TOKEN as string)
     mercadopago.configurations.setAccessToken(
       `${process.env.ACCESS_TOKEN}`
     )
@@ -83,8 +61,6 @@ class MercadopagoServiceWithCreditCard {
         }
       })
   }
-
-
 }
 
-export { MercadopagoServiceWithCreditCard}
+export { MercadopagoServiceWithCreditCard }

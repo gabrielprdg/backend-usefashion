@@ -1,5 +1,5 @@
 import { Decrypter } from '../protocols/criptography/decrypter'
-import { Encrypter, EncryptValues } from '../protocols/criptography/encrypter'
+import { Encrypter } from '../protocols/criptography/encrypter'
 import { HashComparer } from '../protocols/criptography/hash-comparer'
 import { Hasher } from '../protocols/criptography/hasher'
 
@@ -25,7 +25,7 @@ export const mockDecrypter = (): Decrypter => {
 
 export const mockEncrypter = (): Encrypter => {
   class EncrypterStub implements Encrypter {
-    async encrypt (values: EncryptValues): Promise<string> {
+    async encrypt (id: string): Promise<string> {
       return Promise.resolve('any_token')
     }
   }

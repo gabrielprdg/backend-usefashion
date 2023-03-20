@@ -13,7 +13,6 @@ class AddCheckoutTicketController {
             if (error) {
                 return (0, httpHelper_1.badRequest)(error);
             }
-            console.log(httpRequest);
             const { transaction_amount, description, payment_method_id, payer } = httpRequest.body;
             const Mercadopago = new ticketPayment_1.MercadopagoServiceWithTicktet();
             const res = await Mercadopago.executeWithTicket({
