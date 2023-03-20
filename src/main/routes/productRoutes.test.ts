@@ -5,7 +5,6 @@ import { Collection } from 'mongodb'
 import { sign } from 'jsonwebtoken'
 import env from '../config/env'
 
-
 let productCollection: Collection
 let accountCollection: Collection
 
@@ -76,12 +75,13 @@ describe('Product Routes', () => {
         .field('category', 'any_category')
         .field('price', 4)
         .field('description', 'any_description')
-        .field('files','../../presentation/test/imagetest.png')
+        .field('productSize', 'M')
+        .field('productSize', 'G')
         .expect(204)
     })
   })
 
-  describe('GET / Products', () => {
+  describe('GET /products', () => {
     test('Should return 200 on load products ', async () => {
       await productCollection.insertMany([{
         name: 'any_name',
@@ -104,24 +104,27 @@ describe('Product Routes', () => {
     })
   })
 
-  test('Should return 200 on load product by Id', async () => {
-    const res = await productCollection.insertOne({
-      name: 'any_name',
-      description: 'any_description',
-      category: 'any_category',
-      price: 4,
-      images: [{
-        nameFile: 'any_name',
-        size: 'any_size',
-        key: 'any_key',
-        url: 'any_url'
-      }],
-      createdAt: new Date(),
-      count: 1
-    })
+  describe('GET /product', () => {
+    test('Should return 200 on load product by Id', async () => {
+      const res = await productCollection.insertOne({
+        name: 'any_name',
+        description: 'any_description',
+        category: 'any_category',
+        productSize: ['M', 'G'],
+        price: 4,
+        images: [{
+          nameFile: 'any_name',
+          size: 'any_size',
+          key: 'any_key',
+          url: 'any_url'
+        }],
+        createdAt: new Date(),
+        count: 1
+      })
 
-    await request(app)
-      .get(`/api/product/${res.ops[0]._id as string}`)
-      .expect(200)
+      await request(app)
+        .get(`/api/product/${res.ops[0]._id as string}`)
+        .expect(200)
+    })
   })
 })

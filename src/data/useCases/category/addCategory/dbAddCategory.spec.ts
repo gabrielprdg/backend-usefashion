@@ -30,8 +30,9 @@ describe('DbAddCategory', () => {
   })
   test('Shoul call AddCategoryRepostory with correct values', async () => {
     const { addCategoryRepositoryStub, sut } = makeSut()
-    jest.spyOn(addCategoryRepositoryStub, 'add')
+    const addSpy = jest.spyOn(addCategoryRepositoryStub, 'add')
     await sut.add(mockAddCategoryParams())
+    expect(addSpy).toHaveBeenCalledWith(mockAddCategoryParams())
   })
 
   test('Should throws if AddCategoryRepository throws', async () => {

@@ -1,4 +1,5 @@
 import { Collection } from 'mongodb'
+import { mockAddCategoryParams } from '../../../../domain/test/mockCategory'
 import { mongoHelper } from '../helper/mongoHelper'
 import { CategoryMongoRepository } from './categoryMongoRepository'
 
@@ -50,6 +51,18 @@ describe('Category Mongo Repository', () => {
       const sut = makeSut()
       const categories = await sut.loadAll()
       expect(categories.length).toBe(2)
+    })
+  })
+
+  describe('delete()', () => {
+    test('Should delete category by id on success ', async () => {
+      const sut = makeSut()
+      const result = await categoryCollection.insertOne(mockAddCategoryParams())
+      const fakeCategory = result.ops[0]
+
+      await sut.deleteById(fakeCategory._id)
+      const category = await categoryCollection.findOne({ id: fakeCategory.id })
+      expect(category).toBeNull()
     })
   })
 })

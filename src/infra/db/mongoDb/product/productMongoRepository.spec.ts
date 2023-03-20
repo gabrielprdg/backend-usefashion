@@ -30,6 +30,8 @@ describe('Product Mongo Repository', () => {
         description: 'any_description',
         category: 'any_category',
         price: 4,
+        productSize: ['any_size', 'any_size2'],
+        colors: ['any_color', 'any_color2'],
         images: [{
           name: 'any_name',
           size: 2,
@@ -51,6 +53,8 @@ describe('Product Mongo Repository', () => {
         name: 'any_name',
         description: 'any_description',
         category: 'any_category',
+        productSize: ['any_size', 'any_size2'],
+        colors: ['any_color', 'any_color2'],
         price: 4,
         images: [{
           name: 'any_name',
@@ -76,6 +80,8 @@ describe('Product Mongo Repository', () => {
         name: 'any_name',
         description: 'any_description',
         category: 'any_category',
+        productSize: ['any_size', 'any_size2'],
+        colors: ['any_color', 'any_color2'],
         price: 4,
         images: [{
           name: 'any_name',
@@ -89,6 +95,8 @@ describe('Product Mongo Repository', () => {
         name: 'any_name2',
         description: 'any_description2',
         category: 'any_category',
+        productSize: ['any_size', 'any_size2'],
+        colors: ['any_color', 'any_color2'],
         price: 4,
         images: [{
           name: 'any_name',
@@ -112,6 +120,8 @@ describe('Product Mongo Repository', () => {
         name: 'any_name',
         description: 'any_description',
         category: 'any_category',
+        productSize: ['any_size', 'any_size2'],
+        colors: ['any_color', 'any_color2'],
         price: 4,
         images: [{
           name: 'any_name',
@@ -124,6 +134,8 @@ describe('Product Mongo Repository', () => {
         name: 'any_name2',
         description: 'any_description2',
         category: 'any_category2',
+        productSize: ['any_size', 'any_size2'],
+        colors: ['any_color', 'any_color2'],
         price: 4,
         images: [{
           name: 'any_name',

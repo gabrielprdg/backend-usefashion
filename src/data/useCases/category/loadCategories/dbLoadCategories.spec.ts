@@ -28,7 +28,7 @@ describe('LoadCategories', () => {
   afterAll(() => {
     mockdate.reset()
   })
-  test('Should call LoadCategoriesRepostiroy', async () => {
+  test('Should call LoadCategoriesRepository', async () => {
     const { sut, loadCategoriesRepository } = makeSut()
     const loadSpy = jest.spyOn(loadCategoriesRepository, 'loadAll')
     await sut.loadAll()
